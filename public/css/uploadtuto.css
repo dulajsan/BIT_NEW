@@ -1,0 +1,96 @@
+
+
+/*  ppit tab */
+div.panel{
+  z-index: 10;
+  padding: 0;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.ppit-tab-menu{
+  z-index: 10;
+  padding: 0;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.ppit-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.ppit-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.ppit-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.ppit-tab-menu div.list-group>a .glyphicon,
+div.ppit-tab-menu div.list-group>a .fa {
+  color: #8d6cab;
+}
+div.ppit-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.ppit-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.ppit-tab-menu div.list-group>a.active,
+div.ppit-tab-menu div.list-group>a.active .glyphicon,
+div.ppit-tab-menu div.list-group>a.active .fa{
+  background-color: #387db8;
+  background-image: #8d6cab;
+  color: #ffffff;
+}
+div.ppit-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #8d6cab;
+}
+
+div.ppit-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+}
+
+div.ppit-tab div.ppit-tab-content:not(.active){
+  display: none;
+}
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}

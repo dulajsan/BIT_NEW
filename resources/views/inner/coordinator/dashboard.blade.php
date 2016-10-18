@@ -819,7 +819,7 @@ table.fc-border-separate {
                               {"header":"Full name", "key":"full_name"},
                                {"header":"Email", "key":"email"},
                              {"header":"NIC/Passport", "key":"nic_passport"},
-                             {"header":"select", "template":'<input type="checkbox"/>'},
+                             {"header":"select","template":'<input type="checkbox" name="gfgf" value=""/>'},
                              {"header":"options","template":'<div class="dropdown"><button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Action<span class="caret"></span></button><ul class="dropdown-menu">  <li data-toggle="modal" data-target="#myModal">edit</li>  <li><a href="#">view</a></li><li><a href="#">JavaScript</a></li></ul></div>'}
                          ]
 
@@ -836,6 +836,29 @@ table.fc-border-separate {
 
 
 <!--./filter students-->
+
+
+<script>
+$(document).ajaxComplete(function(){
+$('input[type="checkbox"]').on('change', function(e){
+   if(e.target.checked){
+     $('#regModal').modal();
+   }
+
+   $('#ok1').unbind().click(function(){
+     alert(e.target.value)
+   });
+
+   $('#cancel1').unbind().click(function(){
+     alert(e.taget.value);
+   });
+});
+});
+
+
+
+</script>
+
 
 
 

@@ -10,13 +10,14 @@
     </div>
     <div class="row" style="height:30px"></div>
   </div>
+      <!--student table-->
         <section>
             <div id="example4"></div>
         </section>
-
+        <!--student table-->
 
         <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog" style="width:700px">
+          <div class="modal-dialog" style="width:800px">
 
             <!-- Modal content-->
             <div class="modal-content" style="margin-top:80px;">
@@ -32,6 +33,7 @@
                       <li class="active"><a data-toggle="tab" href="#user">User Details</a></li>
                       <li><a data-toggle="tab" href="#contact">Contact Details</a></li>
                       <li><a data-toggle="tab" href="#education">Education Details</a></li>
+                      <li><a data-toggle="tab" href="#registration">Registration Details</a></li>
                   </ul>
                   <!--./tab menu-->
                   <!--form -->
@@ -201,6 +203,55 @@
                         <!--./right-->
 
                       </div>
+                      <!--registration details-->
+                        <div id="registration" class="tab-pane fade">
+                          <!--left-->
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="control-label col-sm-6" for="">Registration location:</label>
+                              <label class="control-label col-sm-6" for="">&nbsp;</label>
+                              <label class="control-label col-sm-2" for="">&nbsp;</label>
+                              <div class="col-sm-10">
+                              <label class="radio-inline"><input type="radio" name="optradio">Colombo</label>
+                              <label class="radio-inline"><input type="radio" name="optradio">Jaffna</label>
+                              <label class="radio-inline"><input type="radio" name="optradio">Galle</label>
+                              </div>
+
+                              <label class="control-label col-sm-2" for="">&nbsp;</label>
+                              <div class="col-sm-10">
+                                <label class="radio-inline"><input type="radio" name="optradio">Colombo</label>
+                                <label class="radio-inline"><input type="radio" name="optradio">Jaffna</label>
+                                <label class="radio-inline"><input type="radio" name="optradio">Galle</label>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <!--./left-->
+
+                          <!--right-->
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="control-label col-sm-6" for="">Employment Details:</label>
+                              <label class="control-label col-sm-6" for="">&nbsp;</label>
+
+                            </div>
+
+                            <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Option 1</label>
+                              </div>
+                              <div class="checkbox">
+                                <label><input type="checkbox" value="">Option 2</label>
+                              </div>
+                            
+                            </div>
+                          </div>
+                          <!--./right-->
+                        </div>
+                      <!--./registartion details-->
+
                     </div>
                     <!--./ tab content-->
                     <!--./form-->
@@ -215,6 +266,40 @@
 
           </div>
         </div>
+        <!--modal end--->
+
+        <!--register or cancel modal-->
+        <div id="regModal" class="modal fade" role="dialog" style="margin-top:80px;">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure ?</p>
+                  <br/>
+                  <div class="row">
+                    <div class="col-sm-8">
+                    </div>
+                    <div class="col-sm-2">
+                      <button type="button" id="ok1" class="btn btn-default" data-dismiss="modal">YES</button>
+                    </div>
+                    <div class="col-sm-2">
+                      <button type="button"  id="cancel1" class="btn btn-default" data-dismiss="modal">NO</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--./register or cancel modal-->
 
 </div>
 

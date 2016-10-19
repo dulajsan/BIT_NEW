@@ -15,4 +15,18 @@ class FilterController extends Controller
       //return View('editDetails',['users'=>$users]);
         return response()->json($users);
     }
+
+
+    public function appDetails(Request $request){
+
+        $id = Auth::id();
+       // $users = User::find($id);
+       $applicants=Applicant::where('user_user_id',$id);
+       $applicants->slip_no=$request->slip;
+       $applicants->save();
+       //$users->applicant()->save($applicants);
+       return $applicants;
+
+
+    }
 }

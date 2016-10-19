@@ -163,6 +163,8 @@ Route::get('/filter', function () {
 
 Route::get('/ApplicantFilter','FilterController@filter');
 
+Route::get('/appDetails','FilterController@appDetails');
+
 //SAR
 
 Route::get('/sar', function () {

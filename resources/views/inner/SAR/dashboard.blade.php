@@ -594,6 +594,7 @@ table.fc-border-separate {
 </script>
 
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
+    <link href="{{{asset('/css/resultUpload.css') }}}" rel="stylesheet">
        <div id="page-wrapper">
 
             <div class="container-fluid">

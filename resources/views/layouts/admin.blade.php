@@ -347,6 +347,12 @@
                     </li>
                     <!--end of exam halls-->
 
+                    <!--uplaod results-->
+                  <li id="resultupload" class="left_tabs">
+                      <i class="fa fa-fw fa-bar-chart-o"></i>Upload Results
+                  </li>
+                  <!--upload results-->
+
                     <li class="left_tabs">
                         <i class="fa fa-fw fa-dashboard"></i>VLE
                     </li>
@@ -491,6 +497,16 @@ $(document).ready(function(){
    });
 
    //end of exam hall handling
+
+
+   //upload results
+  $("#resultupload").click(function(){
+       $( "#contentmain" ).empty();
+       $("#page-wrapper").empty();
+     $( "#page-wrapper").load( "/resultUpload #page-wrapper");
+  });
+
+  //end of uplaod results
 
 
         //letters handling

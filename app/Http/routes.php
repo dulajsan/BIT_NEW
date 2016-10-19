@@ -175,6 +175,8 @@ Route::get('/letters', function () {
     return view('inner/SAR/letters');
 });
 
+Route::get('resultUpload','ResultsUploadController@index');
+
 
 //coordinator
 

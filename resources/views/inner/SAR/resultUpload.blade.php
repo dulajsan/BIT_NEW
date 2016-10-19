@@ -1,11 +1,59 @@
+<style>
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+
+
+.image-preview-input {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+
+</style>
 
 @extends('layouts.admin')
 
 @section('content')
-<div class="page-wrapper">
+<div id="page-wrapper">
+  <div class="container-fluid">
     <div class="row">
 
-    	<div class="col-md-7">
+    	<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
 				<div class="panel-body">
@@ -43,19 +91,11 @@
 			</div>
 		</div>
 
-    	<div class="col-md-5">
-    		<div class="panel panel-default">
-         		<div class="panel-heading"><strong>Download files</strong> <small> </small></div>
-   			<div class="panel-body">
-				<button type="button" class="btn btn-labeled btn-primary"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download catalogue</button>
-				<button type="button" class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download delta</button>
-				<br />
-    		</div>
-    		</div>
-		</div>
+
 
 
 	</div>
+</div>
 </div>
 
 <!-- /container -->

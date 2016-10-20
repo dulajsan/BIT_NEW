@@ -245,7 +245,7 @@
                               <div class="checkbox">
                                 <label><input type="checkbox" value="">Option 2</label>
                               </div>
-                            
+
                             </div>
                           </div>
                           <!--./right-->

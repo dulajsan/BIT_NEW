@@ -19,11 +19,10 @@ class examController extends Controller
 //  return $subject;
 
 
+  }
 
-
-
-
-
+  public function examCreateView(){
+    return View('inner/SAR/exam');
   }
 
 }

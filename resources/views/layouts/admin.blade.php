@@ -353,6 +353,12 @@
                   </li>
                   <!--upload results-->
 
+                  <!--manage exams-->
+                <li id="manageExam" class="left_tabs">
+                    <i class="fa fa-fw fa-bar-chart-o"></i>Manage Exams
+                </li>
+                <!--end of manage exams-->
+
                     <li class="left_tabs">
                         <i class="fa fa-fw fa-dashboard"></i>VLE
                     </li>
@@ -518,6 +524,16 @@ $(document).ready(function(){
        });
 
        //end of letter handling
+
+
+          //manage exams
+         $("#manageExam").click(function(){
+              $( "#contentmain" ).empty();
+              $("#page-wrapper").empty();
+            $( "#page-wrapper").load( "/create_exam #page-wrapper");
+         });
+
+         //end of manage exams
 
 
 });

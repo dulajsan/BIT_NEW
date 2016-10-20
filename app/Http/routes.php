@@ -178,6 +178,9 @@ Route::get('/letters', function () {
 Route::get('resultUpload','ResultsUploadController@index');
 
 
+Route::get('create_exam','examController@examCreateView');
+
+
 //coordinator
 
 Route::get('/editfees', function () {

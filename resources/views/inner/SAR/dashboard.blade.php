@@ -788,6 +788,14 @@ table.fc-border-separate {
     <!--add exam -->
 
   <script>
+  $(document).ajaxComplete(function abc(){
+  $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+  });
+  });
+
     $(document).ajaxComplete(function(){
       $("#exam_add").unbind().click(function(){
 
@@ -795,7 +803,7 @@ table.fc-border-separate {
         var ace_year=$("#ace_year").val();
         var exam_date= $("#exam_date").val();
         var exam_time= $("#exam_time").val();
-        alert(exam_name);
+        //alert(exam_name);
 
 
 

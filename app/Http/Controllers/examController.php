@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Subject;
+use App\Exam;
 
 use Illuminate\Http\Request;
 
@@ -31,7 +32,16 @@ class examController extends Controller
   //add new exam SAR
   public function addExam(Request $request)
   {
-    //
+    $exam=new Exam;
+    $exam->exam_name=$request->exam_name;
+    $exam->date=$request->exam_date;
+    $exam->academic_year=$request->ace_year;
+    $exam->time=$request->exam_time;
+    $exam->Subject_subject_id=2;
+    $exam->pdf_pdf_id=1;
+    $exam->save();
+    return $exam;
+
 
   }
 

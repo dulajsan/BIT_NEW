@@ -27,6 +27,18 @@ class examController extends Controller
   }
 
 
+
+  //add new exam SAR
+  public function addExam(Request $request)
+  {
+    //
+
+  }
+
+
+  //add new exam
+
+
   //load exam to table
   // public function loadExams(){
   //

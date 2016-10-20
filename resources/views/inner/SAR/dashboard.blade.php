@@ -785,5 +785,49 @@ table.fc-border-separate {
     </script>
 
 
+    <!--add exam -->
+
+  <script>
+    $(document).ajaxComplete(function(){
+      $("#exam_add").unbind().click(function(){
+
+        var exam_name= $("#exam_name").val();
+        var ace_year=$("#ace_year").val();
+        var exam_date= $("#exam_date").val();
+        var exam_time= $("#exam_time").val();
+        alert(exam_name);
+
+
+
+
+  $.ajax({
+                  url:"exam_add",
+                  type:"GET",
+                  data:"exam_name="+exam_name+"&ace_year="+ace_year+"&exam_date="+exam_date+"&exam_time="+exam_time,
+                  success:function (data, textstatus, jqXHR)
+                  {
+                      alert("added");
+                  },
+
+                  error:function (jqXHR, textstatus, errorThrown)
+                  {
+                      alert(errorThrown);
+                  }
+
+
+      });
+
+      });
+
+    });
+
+
+  </script>
+
+
+
+    <!--./ add exam -->
+
+
 
 @endsection

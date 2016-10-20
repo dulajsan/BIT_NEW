@@ -31,7 +31,7 @@
             <div class="form-group">
             <label class="col-md-4 control-label" for="Exam name">exam name</label>
             <div class="col-md-4">
-            <input id="Exam name" name="Exam name" type="text" placeholder="placeholder" class="form-control input-md" required="">
+            <input id="exam_name" name="Exam name" type="text" placeholder="placeholder" class="form-control input-md" required="">
             </div>
             </div>
 
@@ -39,7 +39,7 @@
             <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">academic year</label>
             <div class="col-md-4">
-            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+            <input id="ace_year" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
             </div>
             </div>
 
@@ -49,7 +49,7 @@
             <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">date</label>
             <div class="col-md-4">
-            <input id="textinput" name="textinput" type="date" placeholder="placeholder" class="form-control input-md">
+            <input id="exam_date" name="textinput" type="date" placeholder="placeholder" class="form-control input-md">
             </div>
             </div>
 
@@ -58,7 +58,7 @@
             <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">time</label>
             <div class="col-md-4">
-            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+            <input id="exam_time" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
 
             </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton">&nbsp;</label>
             <div class="col-md-4">
-              <button id="singlebutton" name="singlebutton" class="btn btn-primary">submit</button>
+              <button id="exam_add" name="singlebutton" class="btn btn-primary">submit</button>
             </div>
             </div>
 

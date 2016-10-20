@@ -182,6 +182,8 @@ Route::get('create_exam','examController@examCreateView');
 
 Route::get('load_exams','examController@loadExams');
 
+Route::get('exam_add','examController@addExam');
+
 
 //coordinator
 

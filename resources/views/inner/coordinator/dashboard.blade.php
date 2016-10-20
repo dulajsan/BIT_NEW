@@ -861,6 +861,4 @@ $('input[type="checkbox"]').on('change', function(e){
 </script>
 
 
-
-
 @endsection

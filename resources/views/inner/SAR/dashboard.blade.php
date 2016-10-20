@@ -594,6 +594,7 @@ table.fc-border-separate {
 </script>
 
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
+    <link href="{{{asset('/css/classic.css') }}}" rel="stylesheet">
     <link href="{{{asset('/css/resultUpload.css') }}}" rel="stylesheet">
        <div id="page-wrapper">
 
@@ -683,7 +684,7 @@ table.fc-border-separate {
     <!-- /#wrapper -->
 
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
      <script src="http://js.nicedit.com/nicEdit-latest.js"></script>
        <script>
@@ -691,6 +692,7 @@ table.fc-border-separate {
           bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
         });
         </script>
+
     <script>
     $(document).ajaxComplete(function() {
       $("#tabs").tabs();
@@ -699,7 +701,9 @@ table.fc-border-separate {
 
 
     <script>
-    $(document).ajaxComplete(function(){
+
+
+
       + function($) {
     'use strict';
 
@@ -713,7 +717,7 @@ table.fc-border-separate {
         console.log(files)
     }
 
-    uploadForm.addEventListener('submit', function(e) {
+    uploadForm..addEventListener('submit', function(e) {
         var uploadFiles = document.getElementById('js-upload-files').files;
         e.preventDefault()
 
@@ -741,8 +745,43 @@ table.fc-border-separate {
 
 
 
-    });
 
+
+    </script>
+
+
+
+
+    <script type="text/javascript" src="{{asset('js/jquery.columns.min.js')}}"></script>
+    <script>
+
+      $(document).ajaxComplete(function(){
+
+        $.ajax({
+                     url:'/ApplicantFilter',
+                     dataType: 'json',
+                     success: function(json) {
+                         exams = $('#exams').columns({
+                             data:json,
+                             schema: [
+                                 {"header":"ID", "key":"id"},
+                                  {"header":"Full name", "key":"full_name"},
+                                   {"header":"Email", "key":"email"},
+                                 {"header":"NIC/Passport", "key":"nic_passport"},
+                                 {"header":"roles", "key":"role"},
+                                 {"header":"select","template":'<input type="checkbox" name="gfgf" value=""/>'},
+                                 {"header":"options","template":'<div class="dropdown"><button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Action<span class="caret"></span></button><ul class="dropdown-menu">  <li data-toggle="modal" data-target="#myModal">edit</li>  <li><a href="#">view</a></li><li><a href="#">JavaScript</a></li></ul></div>'}
+                             ]
+
+                         });
+                     }
+                 });
+
+        $('#theme').change(function() {
+            $('#style').attr('href', '../css/'+$(this).val());
+        });
+
+      });
     </script>
 
 

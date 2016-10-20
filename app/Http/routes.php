@@ -180,6 +180,8 @@ Route::get('resultUpload','ResultsUploadController@index');
 
 Route::get('create_exam','examController@examCreateView');
 
+Route::get('load_exams','examController@loadExams');
+
 
 //coordinator
 

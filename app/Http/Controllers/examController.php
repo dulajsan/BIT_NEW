@@ -18,11 +18,18 @@ class examController extends Controller
   //  return ['success' => true, 'data' => $subject];
 //  return $subject;
 
-
   }
+
+  //return view
 
   public function examCreateView(){
     return View('inner/SAR/exam');
   }
+
+
+  //load exam to table
+  // public function loadExams(){
+  //
+  // }
 
 }

@@ -758,18 +758,18 @@ table.fc-border-separate {
       $(document).ajaxComplete(function(){
 
         $.ajax({
-                     url:'/ApplicantFilter',
+                     url:'/load_exams',
                      dataType: 'json',
                      success: function(json) {
                          exams = $('#exams').columns({
                              data:json,
                              schema: [
                                  {"header":"ID", "key":"id"},
-                                  {"header":"Full name", "key":"full_name"},
-                                   {"header":"Email", "key":"email"},
-                                 {"header":"NIC/Passport", "key":"nic_passport"},
-                                 {"header":"roles", "key":"role"},
-                                 {"header":"select","template":'<input type="checkbox" name="gfgf" value=""/>'},
+                                  {"header":"Exam name", "key":"exam_name"},
+                                   {"header":"Date", "key":"academic_year"},
+                                 {"header":"time", "key":"time"},
+                                 {"header":"Subject", "key":"Subject_subject_id"},
+
                                  {"header":"options","template":'<div class="dropdown"><button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Action<span class="caret"></span></button><ul class="dropdown-menu">  <li data-toggle="modal" data-target="#myModal">edit</li>  <li><a href="#">view</a></li><li><a href="#">JavaScript</a></li></ul></div>'}
                              ]
 

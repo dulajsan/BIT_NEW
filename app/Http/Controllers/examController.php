@@ -49,9 +49,13 @@ class examController extends Controller
   //add new exam
 
 
-  //load exam to table
-  // public function loadExams(){
-  //
-  // }
+//  load exam to table
+  public function loadExams(){
+    $exams = Exam::where('live',1)->get();
+
+      return response()->json($exams);
+
+
+  }
 
 }

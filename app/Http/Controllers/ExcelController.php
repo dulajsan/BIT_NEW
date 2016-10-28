@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Excel;
 use App\Http\Requests;
+use App\Result;
+use DB;
+use Input;
+
 
 class ExcelController extends Controller
 {
@@ -13,7 +17,7 @@ class ExcelController extends Controller
       Excel::load(Input::file('input-file-preview'),function($reader){
         $reader->each(function($sheet){
           foreach ($sheet -> toArray() as $row) {
-            # code...
+            Result::firstorCreate($sheet->toArray())
           }
 
         });

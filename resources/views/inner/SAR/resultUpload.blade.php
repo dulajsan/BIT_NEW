@@ -58,8 +58,8 @@
 				<div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
 				<div class="panel-body">
 					<div class="input-group image-preview">
-            <form action="\import" method="post" enctype="multipart/form-data">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <form action="/imports" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<input placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
 						<!-- don't give a name === doesn't send on POST/GET -->
 						<span class="input-group-btn">

@@ -184,7 +184,7 @@ Route::get('load_exams','examController@loadExams');
 
 Route::get('exam_add','examController@addExam');
 
-Route::post('import','ExcelController@postImport');
+Route::post('imports','ExcelController@postImport');
 
 //coordinator
 

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Input;
 class ExcelController extends Controller
 {
     public function postImport(){
-
+      try{
 
       Excel::load(Input::file('input-file-preview'),function($reader){
 
@@ -28,7 +28,12 @@ class ExcelController extends Controller
 
       });
       echo "import";
-  
+    }
+
+  catch(\Exception $e){
+    return;
+
+  }
 }
 
 }

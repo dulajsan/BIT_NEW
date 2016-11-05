@@ -54,9 +54,9 @@ body {
 
 @section('content')
 
-<div class="container">
+<div class="container" style="border: 7px solid #2f5989">
 
-  <div class="col-sm-3" style="background-color:#428bca; height:110%; margin-top:18px">
+  <div class="col-sm-3" style="background-color:#428bca; height:110%; margin-top:18px;border-right: 15px #2f5989 solid">
     <div class="row text-center" style="padding-top:15px">
         <img src="{{asset('/images/logo.png')}}"/>
         <br/>
@@ -102,7 +102,7 @@ body {
   <div class="row setup-content" id="step-1">
     <div class="col-sm-10 col-sm-offset-1">
 
-      <div class="row" style="background-color:#fff; padding:30px; border-top:3px #428bca solid">
+      <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid">
         <div class="row" style="color:#2f5989">
         <h3> <b><i>User Details</i></b></h3>
 

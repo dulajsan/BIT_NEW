@@ -313,7 +313,7 @@ body {
               <br/>
 
             </div>
-            <span id="tel_span2" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" /></span>
+            <span id="tel_span2" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" id="land_er"/></span>
           </div>
         </div>
 
@@ -666,6 +666,8 @@ $(document).ready(function(){
 
 </script>
 <!--./nic validator-->
+
+<!--validate mobile-->
 <script>
 $(document).ready(function(){
   $("#tel_er").hide();
@@ -687,8 +689,35 @@ $(document).ready(function(){
 
 });
 
+</script>
+<!--./validate mobile-->
+
+<!--validate land line -->
+<script>
+$(document).ready(function(){
+  $("#land_er").hide();
+
+  $("#land").keyup(function(){
+    var myRegEx3 =/^\d{10}$/;
+    //alert("ok");
+    $("#land_er").show();
+  if (myRegEx3.test($("#land").val())) {
+      $("#land_er").attr("src", "{{ URL::asset('images/right.png') }}");
+    //  alert("ok");
+
+  }
+  else{
+    $("#land_er").attr("src", "{{ URL::asset('images/wrong.png') }}");
+  //  alert("false");
+  }
+});
+
+});
 
 </script>
+
+</script>
+<!--./validate land line-->
 
 <script>
 $(document).ready(function(){

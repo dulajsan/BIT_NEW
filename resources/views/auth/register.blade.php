@@ -301,7 +301,7 @@ body {
               <br/>
 
             </div>
-            <span id="tel_span" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" /></span>
+            <span id="tel_span" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" id="tel_er" /></span>
           </div>
         </div>
 
@@ -313,7 +313,7 @@ body {
               <br/>
 
             </div>
-            <span id="tel_span" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" /></span>
+            <span id="tel_span2" class="col-sm-1"><img  src="{{ URL::asset('images/right.png') }}" width="22px" /></span>
           </div>
         </div>
 
@@ -668,16 +668,20 @@ $(document).ready(function(){
 <!--./nic validator-->
 <script>
 $(document).ready(function(){
-  $("#tel_span").hide();
-  var myRegEx =/^\d[0-9]{10}$/;
+  $("#tel_er").hide();
+
   $("#tel").keyup(function(){
-    $("#tel_span").show();
-  if (myRegEx.test($("#tel").val())) {
-      $("#tel_span").attr("src", "{{ URL::asset('images/right.png') }}");
+    var myRegEx2 =/^\d{10}$/;
+    //alert("ok");
+    $("#tel_er").show();
+  if (myRegEx2.test($("#tel").val())) {
+      $("#tel_er").attr("src", "{{ URL::asset('images/right.png') }}");
+    //  alert("ok");
 
   }
   else{
-    $("#tel_span").attr("src", "{{ URL::asset('images/wrong.png') }}");
+    $("#tel_er").attr("src", "{{ URL::asset('images/wrong.png') }}");
+  //  alert("false");
   }
 });
 

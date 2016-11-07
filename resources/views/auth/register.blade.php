@@ -737,33 +737,39 @@ $(document).ready(function(){
     var email=$("#email").val();
     //alert(email);
 
+    var emailreg=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailreg.test($("#email").val())) {
+
+      $.ajax({
+                      url:"/emailval",
+                      type:"POST",
+                      data:"email="+email,
+
+                      success:function (data, textstatus, jqXHR)
+                      {
+                          if(data==1){
+                            $("#email_span").text("email exist");
+
+                          }
+                          else{
+                              $("#email_span").text("");
+
+                          }
+                      },
+
+                      error:function (jqXHR, textstatus, errorThrown)
+                      {
+                          //alert(errorThrown);
+
+                      }
 
 
-    $.ajax({
-                    url:"/emailval",
-                    type:"POST",
-                    data:"email="+email,
+          });
+        }
 
-                    success:function (data, textstatus, jqXHR)
-                    {
-                        if(data==1){
-                          $("#email_span").text("email exist");
-
-                        }
-                        else{
-                            $("#email_span").text("");
-
-                        }
-                    },
-
-                    error:function (jqXHR, textstatus, errorThrown)
-                    {
-                        //alert(errorThrown);
-
-                    }
-
-
-        });
+        else{
+          $("#email_span").text("invalid format");
+        }
 
 
   });

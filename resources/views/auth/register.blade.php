@@ -53,10 +53,10 @@ body {
 </style>
 
 @section('content')
+<h1 style="text-align:center"><span class="glyphicon glyphicon-user"></span>&nbsp;<i>BIT-Registration<i></h1>
+<div class="container" style="box-shadow:0 0 4px 0 rgba(0,0,0,.08),0 2px 4px 0 rgba(0,0,0,.12); padding-bottom:12px;">
 
-<div class="container" style="border: 7px solid #2f5989">
-
-  <div class="col-sm-3" style="background-color:#428bca; height:110%; margin-top:18px;border-right: 15px #2f5989 solid">
+  <div class="col-sm-3" style="background-color:#ccc; height:110%; margin-top:18px;border-left: 15px #2f5989 solid; border-radius:17px">
     <div class="row text-center" style="padding-top:15px">
         <img src="{{asset('/images/logo.png')}}"/>
         <br/>
@@ -100,9 +100,9 @@ body {
 
   <!--step 1-->
   <div class="row setup-content" id="step-1">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
 
-      <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid">
+      <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid; border-radius:15px;">
         <div class="row" style="color:#2f5989">
         <h3> <b><i>User Details</i></b></h3>
 
@@ -232,9 +232,9 @@ body {
 
 <!--step 2-->
   <div class="row setup-content" id="step-2">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
       <div class="col-sm-12">
-        <div class="row" style="background-color:#fff; padding:30px; border-top:3px #428bca solid">
+        <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid">
           <div class="row" style="color:#2f5989">
 
         <h3><b><i> Contact Information</i></b></h3>
@@ -330,11 +330,11 @@ body {
 <!--step 3-->
 
   <div class="row setup-content" id="step-3">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
       <div class="col-sm-12">
-        <div class="row" style="background-color:#fff; padding:30px; border-top:3px #428bca solid">
+        <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid">
           <div class="row" style="color:#2f5989">
-            <h3> Educational Details</h3>
+            <h3> <b><i>Educational Details</i></b></h3>
           </div>
           <!--form grouops of step 3-->
 
@@ -495,11 +495,11 @@ body {
   <!--step 4-->
 
   <div class="row setup-content" id="step-4">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-12">
       <div class="col-sm-12">
-        <div class="row" style="background-color:#fff; padding:30px; border-top:3px #428bca solid">
+        <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid">
           <div class="row" style="color:#2f5989">
-            <h3> Other Details</h3>
+            <h3><b><i>Other Details</i></b></h3>
           </div>
           <!--form groups of step 4-->
           <div class="row">

@@ -369,6 +369,22 @@
                     @endif
 
 
+                    <!--
+                    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                             admin  admin   admin   admin   admin
+                     |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                             -->
+
+
+                    @if(Auth::user()->role==2)
+
+                    <li id="account" class="left_tabs">
+                        <i class="fa fa-fw fa-bar-chart-o"></i>Account
+                    </li>
+
+                    @endif
+
+
 
                 </ul>
             </div>
@@ -534,6 +550,15 @@ $(document).ready(function(){
          });
 
          //end of manage exams
+
+
+        /** admin   admin admin admin   admin **/
+
+        $("#account").click(function(){
+             $( "#contentmain" ).empty();
+             $("#page-wrapper").empty();
+           $( "#page-wrapper").load( "/create_exam #page-wrapper");
+        });
 
 
 });

@@ -28,5 +28,16 @@ class AdminDashboardController extends Controller
     {
         return view('inner/admin/dashboard');
     }
-    
+
+
+		/**
+		 * Show the account edit details.
+		 *
+		 * @return \Illuminate\Http\Response
+		 */
+		public function editAccount()
+		{
+				return view('inner/admin/account');
+		}
+
 }

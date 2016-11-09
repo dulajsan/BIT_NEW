@@ -557,7 +557,7 @@ $(document).ready(function(){
         $("#account").click(function(){
              $( "#contentmain" ).empty();
              $("#page-wrapper").empty();
-           $( "#page-wrapper").load( "/create_exam #page-wrapper");
+           $( "#page-wrapper").load( "/account #page-wrapper");
         });
 
 

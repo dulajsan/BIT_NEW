@@ -66,7 +66,7 @@ Route::get('/student', function () {
     return view('student');
 });
 
-Route::get("create","testing@index");
+Route::get("create1","testing@index");
 
 Route::post("store","testing@store");
 
@@ -202,6 +202,17 @@ Route::post('/emailval','validateController@validateEmail');
 // admin
 
 Route::get('/account','AdminDashboardController@editAccount');
+
+Route::get('/manage_users', function () {
+    return view('inner/admin/manage_users');
+});
+Route::post('/addUser','manageUser@store');
+
+Route::get("/create",'manageUser@index');
+
+Route::get('/userfilter','manageUser@filterUser');
+
+Route::post('/editUserData','manageUser@update');
 
 
 //-------------------------------------------------------------

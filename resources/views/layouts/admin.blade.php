@@ -382,6 +382,10 @@
                         <i class="fa fa-fw fa-bar-chart-o"></i>Account
                     </li>
 
+                    <li id="manageUsers" class="left_tabs">
+                        <i class="fa fa-fw fa-bar-chart-o"></i>Manage System Users
+                    </li>
+
                     @endif
 
 
@@ -559,6 +563,16 @@ $(document).ready(function(){
              $("#page-wrapper").empty();
            $( "#page-wrapper").load( "/account #page-wrapper");
         });
+
+        //manage users of the system
+        $("#manageUsers").click(function(){
+              $( "#contentmain" ).empty();
+              $("#page-wrapper").empty();
+            $( "#page-wrapper").load( "/manage_users #page-wrapper");
+            $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/classic.css') }}') );
+         });
+
+        //end of manage users
 
 
 });

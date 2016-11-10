@@ -682,6 +682,109 @@ table.fc-border-separate {
     <!-- /#wrapper -->
 
 
+    <script type="text/javascript" src="{{asset('js/jquery.columns.min.js')}}"></script>
+<script>
+
+  $(document).ajaxComplete(function(){
+    $.ajax({
+                 url:'/userfilter',
+                 dataType: 'json',
+                 success: function(json) {
+                     example4 = $('#example4').columns({
+                         data:json,
+                         schema: [
+                             {"header":"ID", "key":"id"},
+                              {"header":"Full name", "key":"full_name"},
+                               {"header":"Email", "key":"email"},
+                             {"header":"NIC/Passport", "key":"nic_passport"},
+                             {"header":"roles", "key":"role"},
+                             {"header":"select","template":'<input type="checkbox" name="gfgf" value=""/>'},
+                             {"header":"options","template":'<div class="dropdown"><button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Action<span class="caret"></span></button><ul class="dropdown-menu">  <li data-toggle="modal" data-target="#myModal">edit</li>  <li><a href="#">view</a></li><li><a href="#">JavaScript</a></li></ul></div>'}
+                         ]
+
+                     });
+                 }
+             });
+
+    $('#theme').change(function() {
+        $('#style').attr('href', '../css/'+$(this).val());
+    });
+
+  });
+</script>
+
+<script>
+$(document).ajaxComplete(function(){
+$('input[type="checkbox"]').on('change', function(e){
+   if(e.target.checked){
+     $('#regModal').modal();
+   }
+
+   $('#ok1').unbind().click(function(){
+     alert(e.target.value)
+   });
+
+   $('#cancel1').unbind().click(function(){
+     alert(e.taget.value);
+   });
+});
+});
+
+
+</script>
+<script type="text/javascript">
+// $("document").ajaxComplete(function(){
+
+//  $.ajaxSetup({
+//           headers: {
+//             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//           }
+//           });
+// });
+
+
+$("document").ajaxComplete(function(){
+    $("#submit").click(function(){
+
+      var full_name= $("#full_name").val();
+    alert(full_name);
+
+      var last_name= $("#last_name").val();
+     alert(last_name);
+
+      var sex=$("input[name=sex]:checked").val();
+       var initials=$("#initials").val();
+      var role=$("input[name=role]:checked").val();
+      var email= $("#email").val();
+
+
+
+
+
+      // var datastring="full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob;
+// $.ajax({
+//                 url:"editUserData",
+//                 type:"GET",
+//                 data:"full_name="+full_name +"&last_name="+last_name+"&sex="+sex+"&initials="+initials +"&role="+role+"&email="+email,
+//                 success:function (data, textstatus, jqXHR)
+//                 {
+//                     alert("updated");
+//                 },
+
+//                 error:function (jqXHR, textstatus, errorThrown)
+//                 {
+//                     alert(errorThrown);
+//                 }
+
+
+//     });
+
+    });
+
+  });
+
+  </script>
+
 
 
 @endsection

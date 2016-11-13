@@ -119,6 +119,7 @@ ul.alert-dropdown {
 
 @media(min-width:768px) {
     .side-nav {
+
         position: fixed;
         top: 51px;
         left: 225px;
@@ -126,11 +127,11 @@ ul.alert-dropdown {
         margin-left: -225px;
         border: none;
         border-radius: 0;
-        overflow-y: auto;
-        background-color: #052b56;
+        overflow-y: hidden;
+        background-color: #333a42;
         bottom: 0;
         overflow-x: hidden;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
     }
 
     .side-nav>li>a {

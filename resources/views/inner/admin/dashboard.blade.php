@@ -786,5 +786,47 @@ $("document").ajaxComplete(function(){
   </script>
 
 
+<!--admin account details update-->
+<script>
+  $("document").ajaxComplete(function(){
+    $("#update_account").unbind().click(function(){
+      alert("ok");
+
+      var ad_name= $("#ad_name").val();
+      var ad_email=$("#ad_email").val();
+      var ad_nic= $("#ad_nic").val();
+
+//
+//
+//
+//       // var datastring="full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob;
+// $.ajax({
+//                 url:"updateprof",
+//                 type:"GET",
+//                 data:"full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob,
+//                 success:function (data, textstatus, jqXHR)
+//                 {
+//                     alert("updated");
+//                 },
+//
+//                 error:function (jqXHR, textstatus, errorThrown)
+//                 {
+//                     alert(errorThrown);
+//                 }
+//
+//
+//     });
+
+    });
+
+  });
+
+
+</script>
+
+
+
+<!--./admin account details-->
+
 
 @endsection

@@ -50,21 +50,21 @@
             color:white !important;
         }
         li{
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid #b5a8a8;
         }
 
         .left_tabs{
             display: block;
             padding: 10px 15px 10px 38px;
             text-decoration: none;
-            color: #fff;
+            color: #b2b1c5;
             width: 225px;
 
         }
 
         .left_tabs:hover{
             color:white;
-            background-color: #1A5276;
+            background-color: #1a1f21;
 
         }
 
@@ -378,12 +378,21 @@
 
                     @if(Auth::user()->role==2)
 
+
+
+                    <li id="manageUsers" class="left_tabs">
+                        <i class="fa fa-fw fa-bar-chart-o"></i>Manage System Users
+                    </li>
+
                     <li id="account" class="left_tabs">
                         <i class="fa fa-fw fa-bar-chart-o"></i>Account
                     </li>
 
-                    <li id="manageUsers" class="left_tabs">
-                        <i class="fa fa-fw fa-bar-chart-o"></i>Manage System Users
+                    <li class="left_tabs">
+                        <i class="fa fa-fw fa-dashboard"></i>VLE
+                    </li>
+                    <li class="left_tabs">
+                        <i class="fa fa-fw fa-dashboard"></i>BIT.lk
                     </li>
 
                     @endif

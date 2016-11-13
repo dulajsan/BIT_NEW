@@ -3,6 +3,20 @@
 <!--calendar styles-->
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/calendar.css')}}"/>
 
+<style>
+.panel-footer{
+ background-color:#0d2840;
+ color:#fff;
+}
+
+.panel-heading{
+  background-color:#3a4454!important;
+  font-size: 20px;
+
+}
+
+</style>
+
 <script type="text/javascript">
 
     $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js',function(){
@@ -69,6 +83,58 @@
 })
 </script>
 
+<script>
+$(document).ready(function(){
+    $(".panel-st1").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st1").animate({height: '80px',opacity:1});
+        $(".panel-heading-st1").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st1").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st1").animate({opacity:0.6});
+    });
+
+    $(".panel-st2").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st2").animate({height: '80px',opacity:1});
+        $(".panel-heading-st2").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st2").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st2").animate({opacity:0.6});
+    });
+
+    $(".panel-st3").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st3").animate({height: '80px',opacity:1});
+        $(".panel-heading-st3").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st3").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st3").animate({opacity:0.6});
+    });
+
+    $(".panel-st4").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st4").animate({height: '80px',opacity:1});
+        $(".panel-heading-st4").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st4").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st4").animate({opacity:0.6});
+    });
+});
+</script>
+
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
        <div id="page-wrapper">
 
@@ -94,61 +160,95 @@
 
         <div class="container-fluid">
 
-                <div class="row" id="cnt">
-                <!--calendar-->
-                    <div class="col-md-8">
-                        <div id="calendar" style="background-color:#fff"></div>
+          <div class="col-lg-3 col-md-6">
+                 <div class="panel panel-primary panel-st1">
+                     <div class="panel-heading panel-heading-st1">
+                         <div class="row">
+                             <div class="col-xs-3">
+                              <img  src="{{ URL::asset('images/dashboard/student.png') }}" width="80px"/>
+                             </div>
+                             <div class="col-xs-9 text-right">
+                                 <div class="huge">&nbsp;</div>
+                                 <div>Exams</div>
+                             </div>
+                         </div>
+                     </div>
+                         <div class="panel-footer panel-footer-st1">
+                             <span class="pull-left">View Details</span>
+                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                             <div class="clearfix"></div>
+                         </div>
+                 </div>
+             </div>
 
-                    </div>
-                <!--end of calendar-->
+             <div class="col-lg-3 col-md-6">
+                       <div class="panel panel-primary panel-st2">
+                           <div class="panel-heading panel-heading-st2">
+                               <div class="row">
+                                   <div class="col-xs-3">
+                                      <img  src="{{ URL::asset('images/dashboard/result.png') }}" width="80px"/>
+                                   </div>
+                                   <div class="col-xs-9 text-right">
+                                       <div class="huge">&nbsp;</div>
+                                       <div>Results</div>
+                                   </div>
+                               </div>
+                           </div>
+                           <a href="#">
+                               <div class="panel-footer panel-footer-st2">
+                                   <span class="pull-left">View Details</span>
+                                   <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                   <div class="clearfix"></div>
+                               </div>
+                           </a>
+                       </div>
+                   </div>
 
-
-                 <!--online users-->
-                <div class="col-md-4">
-                     <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> online users</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> Dulaj sanjaya </td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> Poorna perera</td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> Dilumi Liyanage</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> Chandima Imalika</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> Lahiru Kulathunga</td>
-
-                                        </tr>
-                                    </table>
-
+                   <div class="col-lg-3 col-md-6">
+                            <div class="panel panel-primary panel-st3">
+                                <div class="panel-heading panel-heading-st3">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <img  src="{{ URL::asset('images/dashboard/admission.png') }}" width="80px"/>
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge">&nbsp;</div>
+                                            <div>Admission</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <a href="#">View All  <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
+                                <a href="#">
+                                    <div class="panel-footer panel-footer-st3">
+                                        <span class="pull-left">View Details</span>
+                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
-                </div>
-                <!--end of online users-->
-        </div>
-            <!--end of calendar-->
-
-
+                        <div class="col-lg-3 col-md-6">
+                             <div class="panel panel-primary panel-st4">
+                                 <div class="panel-heading panel-heading-st4">
+                                     <div class="row">
+                                         <div class="col-xs-3">
+                                             <img  src="{{ URL::asset('images/dashboard/messages.png') }}" width="80px"/>
+                                         </div>
+                                         <div class="col-xs-9 text-right">
+                                             <div class="huge">&nbsp;</div>
+                                             <div>Messages</div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <a href="#">
+                                     <div class="panel-footer panel-footer-st4">
+                                         <span class="pull-left">View Details</span>
+                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                         <div class="clearfix"></div>
+                                     </div>
+                                 </a>
+                             </div>
+                         </div>
 
         </div>
         <!-- /#page-wrapper -->

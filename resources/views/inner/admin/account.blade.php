@@ -21,7 +21,7 @@
       <div class="form-group">
           <label class="col-sm-2 control-label">name</label>
           <div class="col-sm-6">
-            <input class="form-control" id="focusedInput" type="text" value="">
+            <input class="form-control" id="ad_name" type="text" value="">
           </div>
           <div class="col-sm-4"></div>
       </div>
@@ -29,7 +29,7 @@
       <div class="form-group">
           <label class="col-sm-2 control-label">email</label>
           <div class="col-sm-6">
-            <input class="form-control" id="focusedInput" type="text" value="">
+            <input class="form-control" id="ad_email" type="text" value="">
           </div>
           <div class="col-sm-4"></div>
       </div>
@@ -37,14 +37,14 @@
       <div class="form-group">
           <label class="col-sm-2 control-label">nic</label>
           <div class="col-sm-6">
-            <input class="form-control" id="focusedInput" type="text" value="">
+            <input class="form-control" id="ad_nic" type="text" value="">
           </div>
           <div class="col-sm-4"></div>
       </div>
       <hr/>
     <div class="form-group">
         <div class="col-sm-4 col-sm-offset-4" style="text-align:right">
-          <button type="submit" class="btn btn-default">Submit</button>
+          <input type="button" class="btn btn-default" id="update_account" value="submit"/>
         </div>
     </div>
     </form>

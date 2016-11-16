@@ -855,4 +855,62 @@ $(document).ajaxComplete
 
   <!--./results-->
 
+<script>
+
+$.ajaxSetup({
+  headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+
+  var username;
+
+  $(document).ajaxComplete(function(){
+
+    $(document).unbind().keyup(function(e){
+      if(e.keyCode==13)
+        sendmessage();
+      else
+      //  isTyping();
+      alert("istyping");
+
+    });
+
+  });
+
+  function sendmessage(){
+    username=$('#usernamechat').text();
+    var text=$('#textchat').val();
+
+    if(text.length>0){
+
+        $.post('sendMessage',{text1:text,username1:username},function(data){
+          alert("success");
+
+          $('#chat-window').append('<br><div style="text-align:right">'+text+'</div><br>');
+          $('#textchat').val('');
+          notTyping();
+
+
+
+        },'json').fail(function(){
+          alert("error");
+
+        });
+    }
+
+  }
+
+
+  function isTyping(){
+    $.post('url',{username:username});
+  }
+
+  function notTyping(){
+    $.post('url2',{username:username});
+  }
+
+
+
+</script>
 @endsection

@@ -142,10 +142,18 @@ Route::get('idCard', function () {
     return view('inner/student/idCard');
 });
 
-//online chat messages
+//online chat messages ui
 Route::get('messages/{username}', function ($username) {
     return view('inner/student/messages')->with('username',$username);
 });
+
+//send message
+Route::post('/sendMessage','StudentDashboardController@sendMessage');
+
+Route::post('/isTyping','StudentDashboardController@isTyping');
+
+Route::post('/notTyping','StudentDashboardController@notTyping');
+
 
 //request new id
 Route::get('/idRequest','StudentDashboardController@id_Request');

@@ -855,5 +855,4 @@ $(document).ajaxComplete
 
   <!--./results-->
 
-
 @endsection

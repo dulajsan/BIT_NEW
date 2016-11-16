@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\IdRequest;
 use Auth;
+use App\Chat_message;
 
 class StudentDashboardController extends Controller
 {
@@ -33,7 +34,7 @@ class StudentDashboardController extends Controller
 
 
 		/**
-		 * Show the application dashboard.
+		 * new id card request.
 		 *
 		 * @return \Illuminate\Http\Response
 		 */
@@ -48,4 +49,25 @@ class StudentDashboardController extends Controller
 
 
 			}
+
+
+			/**
+			 * send messages.
+			 	 *
+			 * @return \Illuminate\Http\Response
+			 */
+
+				public function sendMessage(Request $request){
+					
+						$chatMessage=new chat_message();
+						$chatMessage->sender_username=$request->username1;
+						$chatMessage->message=$request->text1;
+						$chatMessage->save();
+						return response()->json(['response' => 'success']);
+
+
+				}
+
+
+
 }

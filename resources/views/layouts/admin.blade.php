@@ -308,6 +308,10 @@
                        <i class="fa fa-fw fa-file"></i>New iD card
                     </li>
 
+                    <li id="message" class="left_tabs">
+                       <i class="fa fa-fw fa-file"></i>Message
+                    </li>
+
                     <li class="left_tabs">
                         <i class="fa fa-fw fa-dashboard"></i>VLE
                     </li>
@@ -519,6 +523,21 @@ $(document).ready(function(){
 
 
     });
+
+    $("#message").click(function(){
+       $("#contentmain").empty();
+        $("#page-wrapper").empty();
+        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
+      $("#page-wrapper").load( "/messages/dulaj #page-wrapper");
+   });
+    //message
+
+    $("#result").click(function(){
+       $("#contentmain").empty();
+        $("#page-wrapper").empty();
+        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/results.css') }}') );
+      $("#page-wrapper").load( "/results #page-wrapper");
+   });
 
 
     /** SAR **/

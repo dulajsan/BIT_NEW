@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\IdRequest;
 use Auth;
 use App\Chat_message;
+use App\Chat;
 
 class StudentDashboardController extends Controller
 {
@@ -58,7 +59,7 @@ class StudentDashboardController extends Controller
 			 */
 
 				public function sendMessage(Request $request){
-					
+
 						$chatMessage=new chat_message();
 						$chatMessage->sender_username=$request->username1;
 						$chatMessage->message=$request->text1;
@@ -67,6 +68,95 @@ class StudentDashboardController extends Controller
 
 
 				}
+
+
+				/**
+				 * is Typing
+				 	 *
+				 * @return \Illuminate\Http\Response
+				 */
+
+					public function isTyping(Request $request){
+							$username=$request->username;
+							$chat=Chat::find(1);
+							if($chat->user1==$username)
+									$chat->user1_is_typing=true;
+							else
+									$chat->user2_is_typing=true;
+							$chat->save();
+
+
+					}
+
+
+					/**
+					 * not Typing
+					 	 *
+					 * @return \Illuminate\Http\Response
+					 */
+
+						public function notTyping(Request $request){
+								$username=$request->username;
+								$chat=Chat::find(1);
+								if($chat->user1==$username)
+										$chat->user1_is_typing=false;
+								else
+										$chat->user2_is_typing=false;
+								$chat->save();
+
+
+						}
+
+
+						/**
+						 * retrieve chat messages
+							 *
+						 * @return \Illuminate\Http\Response
+						 */
+
+							public function retrieveChatMessages(Request $request){
+									$username=$request->username;
+									$message=chatMessage::where('sender_username','!=',$username)->where('read','=',false)->first();
+
+									if(count($message)>0){
+										$message->read=true;
+										$message->save();
+										return $message->message;
+									}
+
+
+
+							}
+
+							/**
+							 * rretrive typing status
+								 *
+							 * @return \Illuminate\Http\Response
+							 */
+
+								public function retrieveTypingStatus(Request $request){
+										$username=$request->username;
+
+										$chat=Chat::find(1);
+										if($chat->user1==$username){
+											if($chat->user2_is_typing)
+												return $chat->user2;
+
+										}
+
+										else{
+											if($chat->user1_is_typing)
+												return $chat->user1;
+										}
+
+
+
+
+
+
+								}
+
+
 
 
 

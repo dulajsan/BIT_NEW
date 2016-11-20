@@ -528,7 +528,7 @@ $(document).ready(function(){
        $("#contentmain").empty();
         $("#page-wrapper").empty();
         $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
-      $("#page-wrapper").load( "/messages/dulaj #page-wrapper");
+      $("#page-wrapper").load( "/messages #page-wrapper");
    });
     //message
 

@@ -142,9 +142,9 @@ Route::get('idCard', function () {
     return view('inner/student/idCard');
 });
 
-//online chat messages ui
-Route::get('messages/{username}', function ($username) {
-    return view('inner/student/messages')->with('username',$username);
+//real time chat messages ui
+Route::get('/messages', function () {
+    return view('inner/student/messages');
 });
 
 //send message
@@ -153,6 +153,10 @@ Route::post('/sendMessage','StudentDashboardController@sendMessage');
 Route::post('/isTyping','StudentDashboardController@isTyping');
 
 Route::post('/notTyping','StudentDashboardController@notTyping');
+
+Route::post('/retrieveChatMessages','StudentDashboardController@retrieveChatMessages');
+
+Route::post('/retrieveTypingStatus','StudentDashboardController@retrieveTypingStatus');
 
 
 //request new id

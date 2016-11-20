@@ -866,17 +866,47 @@ $.ajaxSetup({
   var username;
 
   $(document).ajaxComplete(function(){
+    pullData();
 
     $(document).unbind().keyup(function(e){
       if(e.keyCode==13)
         sendmessage();
       else
-      //  isTyping();
-      alert("istyping");
+       isTyping();
+
 
     });
 
   });
+
+  function pullData(){
+    retrieveChatMessages();
+    retrieveTypingStatus();
+    setTimeout(pullData,3000);
+  }
+
+
+  function retrieveChatMessages(){
+    $.post('retrieveChatMessages',{username:username},function(data){
+
+      if(data.length>0)
+          $("#chat-window").append('<br><div>'+data+'</div><br>');
+
+    });
+
+  }
+
+  function retrieveTypingStatus(){
+
+    $.post('retrieveTypingStatus',{username:username},function(username){
+      if(username.length>0)
+        $('#typingStatus').html(username+'is typing');
+      else
+        $('#typingStatus').html('');
+
+    });
+
+  }
 
   function sendmessage(){
     username=$('#usernamechat').text();
@@ -903,11 +933,11 @@ $.ajaxSetup({
 
 
   function isTyping(){
-    $.post('url',{username:username});
+    $.post('/isTyping',{username:username});
   }
 
   function notTyping(){
-    $.post('url2',{username:username});
+    $.post('/notTyping',{username:username});
   }
 
 

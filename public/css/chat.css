@@ -2,6 +2,46 @@
   text-align: center;
 }
 
-#chat-window{
-  height: 440px;
+#name_list{
+
+  background-color: #bbb8b8;
+box-shadow: #191313 1px 2px 2px 2px;
+color: #fff;
+list-style: none;
+}
+
+
+
+
+.chat_msg{
+  text-align: right;
+  background-color: #3180bb;
+  color:#fff;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#chat-window .chat_msg{
+  float: right;
+  box-shadow: 1px ;
+}
+
+li img{
+  border-radius: 23px;
+}
+
+.on{
+  color:green;
+}
+
+.off{
+  color:#584f4f;
+}
+
+li{
+  border-bottom: 1px solid #fff;
+}
+
+li:hover{
+  background-color: #635858;
 }

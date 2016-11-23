@@ -127,11 +127,11 @@ ul.alert-dropdown {
         margin-left: -225px;
         border: none;
         border-radius: 0;
-        overflow-y: hidden;
+        overflow-y: auto;
         background-color: #333a42;
         bottom: 0;
         overflow-x: hidden;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 
     .side-nav>li>a {

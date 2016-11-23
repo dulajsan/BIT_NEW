@@ -81,7 +81,7 @@
  <body id="app-layout">
 @endif
 <div id="wrapper">
-    <nav class="navbar  navbar-fixed-top" role="navigation" style="background-color:#2f5989">
+    <nav class="navbar  navbar-fixed-top" role="navigation" style="background-color:#0f1010">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">

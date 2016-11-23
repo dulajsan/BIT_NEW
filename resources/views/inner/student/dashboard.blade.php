@@ -136,7 +136,7 @@ $(document).ready(function(){
 </script>
 
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
-       <div id="page-wrapper">
+       <div id="page-wrapper" style="height:600px">
 
             <div class="container-fluid">
 
@@ -880,13 +880,14 @@ $.ajaxSetup({
   });
 
   function pullData(){
-    retrieveChatMessages();
-    retrieveTypingStatus();
+    retrieveChatMessages(username);
+    retrieveTypingStatus(username);
     setTimeout(pullData,3000);
   }
 
 
-  function retrieveChatMessages(){
+  function retrieveChatMessages(username){
+    username=$('#usernamechat').text();
     $.post('retrieveChatMessages',{username:username},function(data){
 
       if(data.length>0)
@@ -897,6 +898,7 @@ $.ajaxSetup({
   }
 
   function retrieveTypingStatus(){
+
 
     $.post('retrieveTypingStatus',{username:username},function(username){
       if(username.length>0)
@@ -915,9 +917,9 @@ $.ajaxSetup({
     if(text.length>0){
 
         $.post('sendMessage',{text1:text,username1:username},function(data){
-          alert("success");
+          //alert("success");
 
-          $('#chat-window').append('<br><div style="text-align:right">'+text+'</div><br>');
+          $('#chat-window').append('<br><span class="chat_msg">'+text+'</span><br>');
           $('#textchat').val('');
           notTyping();
 
@@ -943,4 +945,6 @@ $.ajaxSetup({
 
 
 </script>
+
+
 @endsection

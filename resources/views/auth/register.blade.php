@@ -587,6 +587,12 @@ body {
 
 
 <script type="text/javascript">
+
+  var isValid_other=true,isValid_email=true,isValid_tel=true,isValid_land=true;
+
+
+
+
   $(document).ready(function () {
   var navListItems = $('div.setup-panel div a'),
           allWells = $('.setup-content'),
@@ -615,7 +621,8 @@ body {
           curStepBtn = curStep.attr("id"),
           nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
           curInputs = curStep.find("input[type='text'],input[type='url'],input[type='radio'],input[type='email'],input[type='date']"),
-          isValid = true;
+          isValid=true;
+
 
       $(".form-group").removeClass("has-error");
       for(var i=0; i<curInputs.length; i++){
@@ -635,6 +642,8 @@ body {
          $("#Citizen").closest(".form-group").addClass("has-error");
 
        }
+
+
        //alert($('#is_nic_id').is(':checked'));
 
        var myRegEx =/^[0-9]{9}[VX]$/;
@@ -643,8 +652,14 @@ body {
            $("#nic").closest(".form-group").addClass("has-error");
        }
 
+       if ($("#country")[0].selectedIndex <= 0) {
+         isvalid=false;
+         $("#country").closest(".form-group").addClass("has-error");
 
-      if (isValid)
+       }
+
+
+      if (isValid && isValid_other && isValid_email && isValid_tel && isValid_land)
           nextStepWizard.removeAttr('disabled').trigger('click');
   });
 
@@ -697,16 +712,20 @@ $(document).ready(function(){
   $("#tel_er").hide();
 
   $("#tel").keyup(function(){
+    isValid_tel=true;
     var myRegEx2 =/^\d{10}$/;
     //alert("ok");
     $("#tel_er").show();
   if (myRegEx2.test($("#tel").val())) {
       $("#tel_er").attr("src", "{{ URL::asset('images/right.png') }}");
+      isValid_tel=true;
     //  alert("ok");
 
   }
   else{
     $("#tel_er").attr("src", "{{ URL::asset('images/wrong.png') }}");
+    isValid_tel=false;
+    $("#tel").closest(".form-group").addClass("has-error");
   //  alert("false");
   }
 });
@@ -722,16 +741,20 @@ $(document).ready(function(){
   $("#land_er").hide();
 
   $("#land").keyup(function(){
+    isValid_land=true;
     var myRegEx3 =/^\d{10}$/;
     //alert("ok");
     $("#land_er").show();
   if (myRegEx3.test($("#land").val())) {
       $("#land_er").attr("src", "{{ URL::asset('images/right.png') }}");
+      isValid_land=true;
     //  alert("ok");
 
   }
   else{
     $("#land_er").attr("src", "{{ URL::asset('images/wrong.png') }}");
+    isValid_land=false;
+    $("#land").closest(".form-group").addClass("has-error");
   //  alert("false");
   }
 });
@@ -758,6 +781,7 @@ headers: {
 <script>
 $(document).ready(function(){
   $("#email").keyup(function(){
+    isValid_email=true;
     var email=$("#email").val();
     //alert(email);
 
@@ -773,10 +797,13 @@ $(document).ready(function(){
                       {
                           if(data==1){
                             $("#email_span").text("email exist");
+                            isValid_email=false;
+                            $("#email").closest(".form-group").addClass("has-error");
 
                           }
                           else{
                               $("#email_span").text("");
+                              isValid_email=true;
 
                           }
                       },
@@ -793,6 +820,8 @@ $(document).ready(function(){
 
         else{
           $("#email_span").text("invalid format");
+          isValid_email=false;
+          $("#email").closest(".form-group").addClass("has-error");
         }
 
 

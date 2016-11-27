@@ -608,6 +608,8 @@ body {
       }
   });
 
+  //next button validations
+
   allNextBtn.click(function(){
       var curStep = $(this).closest(".setup-content"),
           curStepBtn = curStep.attr("id"),
@@ -633,6 +635,14 @@ body {
          $("#Citizen").closest(".form-group").addClass("has-error");
 
        }
+       //alert($('#is_nic_id').is(':checked'));
+
+       var myRegEx =/^[0-9]{9}[VX]$/;
+       if ((!myRegEx.test($("#nic").val())) &&  ($('#is_nic_id').is(':checked'))) {
+           isValid=false;
+           $("#nic").closest(".form-group").addClass("has-error");
+       }
+
 
       if (isValid)
           nextStepWizard.removeAttr('disabled').trigger('click');
@@ -663,15 +673,18 @@ $(document).ready(function(){
   $("#nic").keyup(function(){
     $("#nic_er").show();
 
-
-    var myRegEx =/^[0-9]{9}[V]$/;
+    var myRegEx =/^[0-9]{9}[VX]$/;
     if (myRegEx.test($("#nic").val())) {
         $("#nic_er").attr("src", "{{ URL::asset('images/right.png') }}");
 
     }
     else{
       $("#nic_er").attr("src", "{{ URL::asset('images/wrong.png') }}");
+
     }
+
+
+
 });
 });
 

@@ -297,7 +297,7 @@ body {
            <div class="form-group">
             <label class="control-label col-sm-2" for="tel">Contact No:</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="tel" placeholder="Enter mobile" name="mobile">
+              <input type="text" class="form-control" id="tel" placeholder="Enter mobile" name="mobile" required>
               <br/>
 
             </div>
@@ -309,7 +309,7 @@ body {
            <div class="form-group">
             <label class="control-label col-sm-2" for="tel">Contact No:</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="land" placeholder="Enter Landline" name="land">
+              <input type="text" class="form-control" id="land" placeholder="Enter Landline" name="land" required>
               <br/>
 
             </div>
@@ -612,7 +612,7 @@ body {
       var curStep = $(this).closest(".setup-content"),
           curStepBtn = curStep.attr("id"),
           nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          curInputs = curStep.find("input[type='text'],input[type='url'],input[type='radio'],input[type='email'],input[type='date']"),
           isValid = true;
 
       $(".form-group").removeClass("has-error");
@@ -622,6 +622,17 @@ body {
               $(curInputs[i]).closest(".form-group").addClass("has-error");
           }
       }
+
+       if ($("#Title ")[0].selectedIndex <= 0){
+         isvalid=false;
+         $("#Title").closest(".form-group").addClass("has-error");
+       }
+
+       if ($("#Citizen ")[0].selectedIndex <= 0) {
+         isvalid=false;
+         $("#Citizen").closest(".form-group").addClass("has-error");
+
+       }
 
       if (isValid)
           nextStepWizard.removeAttr('disabled').trigger('click');

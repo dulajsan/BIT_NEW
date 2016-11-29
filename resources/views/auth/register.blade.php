@@ -88,6 +88,10 @@ body {
       <a href="#step-4" type="button" class="btn btn-default btn-circle" style="width:34px; height:34px; border-radius:28px" disabled="disabled">4</a>
       <p>Other details</p>
     </div>
+    <div class="stepwizard-step" style="display:none;">
+      <a href="#step-5" type="button" class="btn btn-default btn-circle" style="width:34px; height:34px; border-radius:28px" disabled="disabled">4</a>
+      <p>declaration</p>
+    </div>
 
   </div>
 </div>
@@ -571,13 +575,46 @@ body {
 
           <!--./form groups of step 4-->
           <div class="row">
-            <button class="btn btn-default btn-lg pull-right" type="submit"><i class="fa fa-btn fa-user"></i>Register</button>
+            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
           </div>
+
       </div>
     </div>
     </div>
   </div>
   <!--step 4-->
+
+  <!--step 5-->
+
+  <div class="row setup-content" id="step-5">
+    <div class="col-sm-12">
+
+      <div class="row" style="background-color:#fff; padding:30px; padding-top:5px;border-top:5px #2f5989 solid; border-radius:15px;">
+        <div class="row" style="color:#2f5989">
+        <h3> <b><i>Declaration</i></b></h3>
+      </div>
+
+      <div class="row">
+            I do hereby certify that the above details furnished by me are true and correct. In the event of my
+            application for registration being accepted, I shall abide by all regulations governing external
+            candidates of the University of Colombo School Of Computing. I agree that the University has the right
+            to cancel my registrtion at any time, either if I am found to have furnished false information or
+            If I do not abide by the regulations governing external candidates of the university of colombo
+            school of computing.
+      </div>
+      <!--registration btn-->
+      <div class="row">
+        <button class="btn btn-default btn-lg pull-right" type="submit"><i class="fa fa-btn fa-user"></i>Register</button>
+      </div>
+      <!--./registration btn-->
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--./step 5-->
+
 </form>
 
 </div>

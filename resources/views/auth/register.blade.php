@@ -273,10 +273,11 @@ body {
             <label class="control-label col-sm-2" for="pwd">Country</label>
             <div class="col-sm-10">
               <select class="form-control" id="country" name="country" required>
-                <option>--select--</option>
-                <option>Sri lanka</option>
-                <option>India</option>
-                <option>Singapore</option>
+                @foreach($countries as $country)
+                <option>{{$country->name}}</option>
+
+
+                @endforeach
               </select>
             </div>
           </div>

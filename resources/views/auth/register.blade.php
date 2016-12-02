@@ -508,6 +508,7 @@ body {
           </div>
           <!--form groups of step 4-->
           <div class="row">
+            <h3>prefered registration location</h3>
           <div class="form-group">
           <div class="radio col-sm-3 col-sm-offset-1">
             <label><input type="radio" name="registration_loc" value="Colombo" required>Colombo</label>
@@ -601,6 +602,10 @@ body {
             to cancel my registrtion at any time, either if I am found to have furnished false information or
             If I do not abide by the regulations governing external candidates of the university of colombo
             school of computing.
+            <br/>
+
+            <input type="checkbox" value="" id="declaration"/>
+            I have read and accept the above terms.
       </div>
       <!--registration btn-->
       <div class="row">

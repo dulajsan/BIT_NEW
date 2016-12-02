@@ -179,9 +179,29 @@ class AuthController extends Controller
         $applicant->subject3=$data['year3']."-".$data['subject3']."-".$data['grade3'];
         $applicant->subject4=$data['year4']."-".$data['subject4']."-".$data['grade4'];
         $applicant->registration_location=$data['registration_loc'];
-        $applicant->is_employed=$data['employ'];
-        $applicant->is_computerfield=$data['computerfield'];
-        $applicant->designation=$data['designation'];
+        // if($data['employ']!=""){
+        //     $applicant->is_employed=$data['employ'];
+        // }
+        //echo $data['employ'];
+
+
+          $employ = !empty($data['employ']) ? 'on' : '';
+          if($employ == "on")
+              $applicant->is_employed=1;
+          else
+              $applicant->is_employed=0;
+
+          $computerfield = !empty($data['computerfield']) ? 'on' : '';
+          if($computerfield == "on")
+              $applicant->is_computerfield=1;
+          else
+              $applicant->is_computerfield=0;
+
+
+        //$applicant->is_computerfield=$data['computerfield'];
+        if($data['designation']!=""){
+          $applicant->designation=$data['designation'];
+        }
         $appno = mt_rand(100000, 999999);
         $applicant->applicant_no=$appno;
 

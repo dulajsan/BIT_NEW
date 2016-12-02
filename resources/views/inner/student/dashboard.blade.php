@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.admin',['title' => $title])
 @section('content')
 <!--calendar styles-->
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/calendar.css')}}"/>

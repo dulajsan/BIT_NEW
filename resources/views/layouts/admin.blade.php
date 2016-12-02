@@ -90,7 +90,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="color:#FFF;font-size:35px">BIT</a><span><a href="#" class="navbar-brand" style="color:#FFF">External Degree Center</span></a>
+                <a class="navbar-brand" href="index.html" style="color:#FFF;font-size:35px">BIT</a><span><a href="#" class="navbar-brand" style="color:#FFF">External Degree Center{{ $title }}</span></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

@@ -603,6 +603,8 @@ body {
             If I do not abide by the regulations governing external candidates of the university of colombo
             school of computing.
             <br/>
+            <br/>
+          
 
             <input type="checkbox" value="" id="declaration"/>
             I have read and accept the above terms.

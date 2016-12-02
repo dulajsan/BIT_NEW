@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b95c91851573d52d086d6e541a4a6660",
+    "content-hash": "47550117d6f94c8681d2525fd31e91ca",
     "packages": [
+        {
+            "name": "anhskohbo/no-captcha",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anhskohbo/no-captcha.git",
+                "reference": "07fd1583feae651c4db3652719f2d46fa23c4fd4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anhskohbo/no-captcha/zipball/07fd1583feae651c4db3652719f2d46fa23c4fd4",
+                "reference": "07fd1583feae651c4db3652719f2d46fa23c4fd4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Anhskohbo\\NoCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "anhskohbo",
+                    "email": "anhskohbo@gmail.com"
+                }
+            ],
+            "description": "No CAPTCHA reCAPTCHA For Laravel.",
+            "keywords": [
+                "captcha",
+                "laravel",
+                "laravel4",
+                "laravel5",
+                "no-captcha",
+                "recaptcha"
+            ],
+            "time": "2016-08-24 16:35:03"
+        },
         {
             "name": "barryvdh/laravel-snappy",
             "version": "v0.3.1",

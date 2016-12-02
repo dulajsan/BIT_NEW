@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+Use Illuminate\Http\Request;
 
 use App\User;
 use App\Applicant;
@@ -112,7 +113,7 @@ class AuthController extends Controller
     protected function create(array $data)
     {
 
-      
+
 
         // return User::create([
         //     'full_name' => $data['full_name'],
@@ -182,6 +183,7 @@ class AuthController extends Controller
         $applicant->subject3=$data['year3']."-".$data['subject3']."-".$data['grade3'];
         $applicant->subject4=$data['year4']."-".$data['subject4']."-".$data['grade4'];
         $applicant->registration_location=$data['registration_loc'];
+        $applicant->activated_ip= \Request::ip();
         // if($data['employ']!=""){
         //     $applicant->is_employed=$data['employ'];
         // }

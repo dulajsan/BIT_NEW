@@ -608,7 +608,7 @@ body {
             <div class="row">
                 {!! app('captcha')->display(); !!}
             </div>
-            
+
             <input type="checkbox" value="" id="declaration"/>
             I have read and accept the above terms.
       </div>

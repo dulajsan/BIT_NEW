@@ -168,6 +168,9 @@ return [
         /*excel upload */
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
+        /*recaptcha */
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+
 
 
     ],

@@ -891,7 +891,7 @@ $.ajaxSetup({
     $.post('retrieveChatMessages',{username:username},function(data){
 
       if(data.length>0)
-          $("#chat-window").append('<br><div>'+data+'</div><br>');
+          $("#chat-window").html('<br><div>'+data+'</div><br>');
 
     });
 

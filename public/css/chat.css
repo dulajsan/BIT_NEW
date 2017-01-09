@@ -3,11 +3,10 @@
 }
 
 #name_list{
-
-  background-color: #bbb8b8;
-box-shadow: #191313 1px 2px 2px 2px;
-color: #fff;
+box-shadow: #3c8dbc 1px 1px 1px 1px;
+color: black;
 list-style: none;
+border-top: #3c8dbc 6px solid;
 }
 
 
@@ -38,10 +37,7 @@ li img{
   color:#584f4f;
 }
 
-li{
-  border-bottom: 1px solid #fff;
-}
 
-li:hover{
-  background-color: #635858;
+.li_name{
+  height: 40px;
 }

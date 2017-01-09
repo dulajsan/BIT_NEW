@@ -11,9 +11,9 @@
 <div class="container-fluid" style="height:20px">
 </div>
 
-  <div class="container-fluid">
-    <div class="row">
-		<section>
+  <div class="container-fluid white_backg">
+
+
         <div class="wizard">
                 <ul class="nav nav-wizard">
 
@@ -33,11 +33,11 @@
                         <div class="row" style="height:70px"></div>
 
 						<div class="description">
-					<div class="row">
-						<h4>Claim for a new Identity card</h4>
-						<p>You will have to pay an amount of <b>Rs.100</b> to get a new ID.
+								<div class="row">
+									<h4>Claim for a new Identity card</h4>
+									<p>You will have to pay an amount of <b>Rs.100</b> to get a new ID.
+								</div>
 					</div>
-				</div>
 
 
 				<div class="row">
@@ -92,9 +92,11 @@
                 </div>
 
         </div>
-    </section>
-   </div>
+
+
 </div>
+
 </div>
+
 
 @endsection

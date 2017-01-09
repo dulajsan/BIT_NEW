@@ -4,7 +4,7 @@
 @section('content')
 
 <div id="page-wrapper">
-  <section >
+  <section class="white_backg">
 <input type="radio" id="profile" value="1" name="tractor" checked='checked' />
 <input type="radio" id="settings" value="2" name="tractor" />
 <input type="radio" id="posts" value="3" name="tractor" />

@@ -68,6 +68,16 @@
 
         }
 
+        .white_backg{
+        	background: #FFF;
+            
+            max-width: 120rem;
+            min-width: 390px;
+            height: 50rem;
+
+            box-shadow: 0 0 6px rgba(0,0,0,.4);
+        }
+
 
     </style>
 

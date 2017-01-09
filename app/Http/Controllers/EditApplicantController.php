@@ -154,15 +154,19 @@ class EditApplicantController extends Controller
    }
 
 
+
    public function add_slip(Request $request){
 
-       $id = Auth::id();
-      // $users = User::find($id);
-      $applicants=Applicant::where('user_user_id',$id);
-      $applicants->slip_no=$request->slip;
-      $applicants->save();
-      //$users->applicant()->save($applicants);
-      return $applicants;
+      $id = Auth::id();
+      $users = User::find($id);
+      $app=Applicant::where('user_user_id',$id)->get();
+      $app->slip_no=$request->slips;
+      //$applicants->save();
+
+       $users->applicant()->save($applicants);
+      // return $applicants;
+      return "ok";
+
 
 
    }

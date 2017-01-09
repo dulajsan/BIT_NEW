@@ -1,4 +1,4 @@
-@extends('layouts.admin',['title' => $title])
+@extends('layouts.admin')
 @section('content')
 <!--calendar styles-->
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/calendar.css')}}"/>
@@ -854,7 +854,7 @@ $(document).ajaxComplete
 
 
   <!--./results-->
-
+<!--
 <script>
 
 $.ajaxSetup({
@@ -944,7 +944,7 @@ $.ajaxSetup({
 
 
 
-</script>
+</script> -->
 
 
 @endsection

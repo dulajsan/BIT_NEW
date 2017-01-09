@@ -105,7 +105,7 @@
 
 
 <div class="container-fluid text-center">
-  <div class="row content">
+  <div class="row content container-fluid">
       <div class="col-sm-2 sidenav">
 
         @foreach($users as $user)
@@ -191,6 +191,8 @@
 
         <!--slip no text box-->
             <input type="textbox" class="custom_bx" placeholder="Enter slip number" id="txt_slip">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
         <!--./slip no text box-->
       </h3>
 
@@ -316,15 +318,11 @@
 
 <script>
 
-
-
+$.ajaxSetup({
+    headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
+});
 
 $(document).ready(function(){
-  $.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-  });
 
 
   $("#btn_slip").click(function(){
@@ -333,18 +331,18 @@ $(document).ready(function(){
       alert("Enter slip Number");
     }
     else{
-
+      //alert(slip);
       $.ajax({
         url:"/addslip",
         type:"POST",
-        data:"slip="+slip,
+        data:"slips="+slip,
         success:function(data, textstatus, jqXHR){
           alert("added succesfully");
 
         },
         error:function(jqXHR, textstatus, errorThrown){
           //alert(errorThrown);
-          alert("added succesully")
+          alert("Try again later");
 
         }
       });

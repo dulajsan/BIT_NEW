@@ -207,7 +207,9 @@ class AuthController extends Controller
         if($data['designation']!=""){
           $applicant->designation=$data['designation'];
         }
-        $appno = mt_rand(100000, 999999);
+        $appno = mt_rand(1, 99999);
+        str_pad($appno, 5, '0', STR_PAD_LEFT);
+        $appno="R17".(string)$appno;
         $applicant->applicant_no=$appno;
 
         $user->applicant()->save($applicant);

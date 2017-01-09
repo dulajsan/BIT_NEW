@@ -30,7 +30,7 @@ class StudentDashboardController extends Controller
      */
     public function index()
     {
-        return view('inner/student/dashboard',array('title' => 'Home page'));
+        return view('inner/student/dashboard');
     }
 
 

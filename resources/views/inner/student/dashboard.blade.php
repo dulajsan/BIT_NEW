@@ -854,7 +854,7 @@ $(document).ajaxComplete
 
 
   <!--./results-->
-<!--
+
 <script>
 
 $.ajaxSetup({
@@ -944,7 +944,7 @@ $.ajaxSetup({
 
 
 
-</script> -->
+</script>
 
 
 @endsection

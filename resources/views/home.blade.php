@@ -191,7 +191,6 @@
 
         <!--slip no text box-->
             <input type="textbox" class="custom_bx" placeholder="Enter slip number" id="txt_slip">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <!--./slip no text box-->
       </h3>
@@ -318,12 +317,14 @@
 
 <script>
 
-$.ajaxSetup({
-    headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
-});
 
 $(document).ready(function(){
 
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
 
   $("#btn_slip").click(function(){
     var slip=$("#txt_slip").val();
@@ -335,7 +336,7 @@ $(document).ready(function(){
       $.ajax({
         url:"/addslip",
         type:"POST",
-        data:"slips="+slip,
+        data:{'slips': slip},
         success:function(data, textstatus, jqXHR){
           alert("added succesfully");
 

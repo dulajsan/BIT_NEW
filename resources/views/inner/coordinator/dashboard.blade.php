@@ -875,13 +875,13 @@ headers: {
 $(document).ajaxComplete(function(){
   $("#addcourse_btn").unbind().click(function(){
     var semester=$('#semester').val();;
-    var course_code=$("crse_code").val();
-    var course_name=$("crse_name").val();
+    var course_code=$("#crse_code").val();
+    var course_name=$("#crse_name").val();
     var opt_com=$('input[name=optman]:checked').val();
     var credits=$("#crse_credit").val();
     var fee=$("#crse_fee").val();
 
-
+  //  alert(course_code);
 
     $.ajax({
       url:"/addcourse",

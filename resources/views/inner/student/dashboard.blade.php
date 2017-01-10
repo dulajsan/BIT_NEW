@@ -459,6 +459,12 @@ $("#get_cost").unbind().click(function(){
   <!--./calculate cost of subjects-->
 
 
+  <!--selected subject to database-->
+  <script>
+
+  </script>
+  <!--./selected subject to database-->
+
 
   <!--new id request-->
 
@@ -891,7 +897,7 @@ $.ajaxSetup({
     $.post('retrieveChatMessages',{username:username},function(data){
 
       if(data.length>0)
-          $("#chat-window").html('<br><div>'+data+'</div><br>');
+        //  $("#chat-window").html('<br><div>'+data+'</div><br>');
 
     });
 

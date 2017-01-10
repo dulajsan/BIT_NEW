@@ -254,32 +254,32 @@ div.ppit-tab div.ppit-tab-content:not(.active){
 													<input type="text-center" class="form-control" placeholder="course_name">
 												</div>
 
-												<div class = "input-group" style="padding:10px; width: 75%">
-													<span class = "input-addon">Description</span>
-													<textarea class = "form-control" rows="3"></textarea>
+
+												<div class = "input-group col-sm-5" style="padding:10px">
+													<span>&nbsp;</span>
+													<label class="radio-inline">
+												      <input type="radio" name="optradio">Optional
+												    </label>
+												    <label class="radio-inline">
+												      <input type="radio" name="optradio">mandatory
+												    </label>
 												</div>
 
+												<div style="padding:10px" class="code col-sm-5">
+													<span>num of credits</span>
+													<input type="text-center" class="form-control" placeholder="course_code">
+												</div>
 
-												<div style="padding:10px" class="hours">
-													<div class="col-sm-2">
-														<span>Course hours</span>
-													</div>
-													<div class="col-sm-3">
-														<input type="text-center" class="form-control" placeholder="lectures">
-													</div>
-													<div class="col-sm-3">
-														<input type="text-center" class="form-control" placeholder="practicals">
-													</div>
+												<div style="padding:10px" class="name col-sm-7">
+													<span>Fee</span>
+													<input type="text-center" class="form-control" placeholder="course_name">
 												</div>
 
 
 												<div class="row" style="height:30px"></div>
 
-
-												<center>
-													<div class="row" style="height: 30px"></div>
-													<a href = "#" class = "btn btn-default btn-lg" role = "button">Admission enable</a>
-												</center>
+												<br/><br/>
+												<button type="button" class="btn btn-primary active" style="float:right;margin:5px;">submit</button>
 
 
 											</div>
@@ -298,7 +298,7 @@ div.ppit-tab div.ppit-tab-content:not(.active){
 				<center>
 					<div class="row" style="height: 30px"></div>
 					<div class="header">
-						
+
 					</div>
 					<div class="row" style="height: 50px"></div>
 

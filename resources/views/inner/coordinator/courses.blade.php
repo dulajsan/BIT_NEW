@@ -238,48 +238,51 @@ div.ppit-tab div.ppit-tab-content:not(.active){
 
 												<div class = "input-group col-sm-5" style="padding:10px">
 													<span>Semester</span>
-													<select class = "form-control text-center">
-														<option class="text-right">1</option>
-														<option class="text-right">2</option>
+													<select class= "form-control text-center" id="semester">
+														<option class="text-right" value="1">1</option>
+														<option class="text-right" value="2">2</option>
+														<option class="text-right" value="3">3</option>
+														<option class="text-right" value="4">4</option>
+														<option class="text-right" value="5">5</option>
 													</select>
 												</div>
 
 												<div style="padding:10px" class="code col-sm-5">
 													<span>Course Code</span>
-													<input type="text-center" class="form-control" placeholder="course_code">
+													<input type="text-center" class="form-control" placeholder="course_code" id="crse_code">
 												</div>
 
 												<div style="padding:10px" class="name col-sm-7">
 													<span>Course name</span>
-													<input type="text-center" class="form-control" placeholder="course_name">
+													<input type="text-center" class="form-control" placeholder="course_name" id="crse_name">
 												</div>
 
 
 												<div class = "input-group col-sm-5" style="padding:10px">
 													<span>&nbsp;</span>
 													<label class="radio-inline">
-												      <input type="radio" name="optradio">Optional
+												      <input type="radio" name="optman" value="o">Optional
 												    </label>
 												    <label class="radio-inline">
-												      <input type="radio" name="optradio">mandatory
+												      <input type="radio" name="optman" value="c">compulsory
 												    </label>
 												</div>
 
 												<div style="padding:10px" class="code col-sm-5">
 													<span>num of credits</span>
-													<input type="text-center" class="form-control" placeholder="course_code">
+													<input type="text-center" class="form-control" placeholder="num of credits" id="crse_credit">
 												</div>
 
 												<div style="padding:10px" class="name col-sm-7">
 													<span>Fee</span>
-													<input type="text-center" class="form-control" placeholder="course_name">
+													<input type="text-center" class="form-control" placeholder="Fee" id="crse_fee">
 												</div>
 
 
 												<div class="row" style="height:30px"></div>
 
 												<br/><br/>
-												<button type="button" class="btn btn-primary active" style="float:right;margin:5px;">submit</button>
+												<button type="button" id="addcourse_btn"class="btn btn-primary active" style="float:right;margin:5px;">submit</button>
 
 
 											</div>

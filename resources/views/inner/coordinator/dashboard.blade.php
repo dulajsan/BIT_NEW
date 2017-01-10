@@ -861,4 +861,50 @@ $('input[type="checkbox"]').on('change', function(e){
 </script>
 
 
+<!--add course-->
+<script>
+
+$(document).ready(function(){
+$.ajaxSetup({
+headers: {
+  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+}
+});
+});
+
+$(document).ajaxComplete(function(){
+  $("#addcourse_btn").unbind().click(function(){
+    var semester=$('#semester').val();;
+    var course_code=$("crse_code").val();
+    var course_name=$("crse_name").val();
+    var opt_com=$('input[name=optman]:checked').val();
+    var credits=$("#crse_credit").val();
+    var fee=$("#crse_fee").val();
+
+
+
+    $.ajax({
+      url:"/addcourse",
+      type:"POST",
+      data:"semester="+semester+"&course_code="+course_code+"&course_name="+course_name+"&opt_com="+opt_com+"&credits="+credits+"&fee="+fee,
+      success:function(data, textstatus, jqXHR){
+        alert(data);
+
+
+      },
+      error:function(jqXHR, textstatus, errorThrown){
+        alert(errorThrown);
+
+      }
+
+
+    });
+
+  });
+
+});
+
+</script>
+<!--./add course-->
+
 @endsection

@@ -907,4 +907,80 @@ $(document).ajaxComplete(function(){
 </script>
 <!--./add course-->
 
+
+<script>
+$(document).ready(function abc(){
+$.ajaxSetup({
+headers: {
+  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+}
+});
+});
+
+
+//subject selection
+
+$(document).ajaxComplete(function(){
+
+      $('#subject_content').empty();
+      var sub=document.getElementById('subject_content');
+
+
+        $.ajax({
+                        url:"/loadCourses",
+                        type:"POST",
+                        success:function (data, textstatus, jqXHR)
+                        {
+                          var data=data;
+                          $("#num_of_sub").val(data.length);
+                          for(var i=0;i<data.length;i++)
+                          {
+                            var tr=sub.insertRow();
+
+                            var td1=tr.insertCell(0);
+                            td1.innerHTML=data[i].subject_code;
+
+                            var td2=tr.insertCell(1);
+                            td2.innerHTML=data[i].subject_name;
+
+                            var td3=tr.insertCell(2);
+                            td3.innerHTML=data[i].compulsory_optional;
+
+                            var td4=tr.insertCell(3);
+                            td4.innerHTML="R.S. "+data[i].fee+"/=";
+
+
+                            var td5=tr.insertCell(4);
+                            td5.innerHTML="<input type='checkbox' id='sub"+i+"'   value='"+data[i].subject_code+"'/>";
+
+                            var td6=tr.insertCell(5);
+                            td6.innerHTML="<input type='hidden' id='fee"+i+"'   value='"+data[i].fee+"'/>";
+
+
+
+                          }
+
+
+                        },
+
+                        error:function (jqXHR, textstatus, errorThrown)
+                        {
+                            alert(errorThrown);
+
+                        }
+
+
+            });
+
+  });
+
+
+});
+
+
+</script>
+
+<!--./load subjects in exam.blade.php-->
+
+
 @endsection

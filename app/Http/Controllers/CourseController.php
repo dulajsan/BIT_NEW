@@ -22,4 +22,13 @@ class CourseController extends Controller
       return $subject;
 
     }
+
+
+    public function loadCourse(Request $request){
+      $subjects=Subject::all();
+     return response()->json($subjects);
+
+
+
+    }
 }

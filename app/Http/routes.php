@@ -184,6 +184,8 @@ Route::get('/appDetails','FilterController@appDetails');
 
 Route::post('/addcourse','CourseController@addCourse');
 
+Route::post('/loadCourses','CourseController@loadCourse');
+
 //SAR
 
 Route::get('/sar', function () {

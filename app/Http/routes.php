@@ -98,6 +98,8 @@ Route::get('/getVouch','PDFController@getVouch')->middleware(['auth','applicant'
 
 Route::get('/getExamApp','PDFController@getExamApp')->middleware('student');
 
+Route::get('/manual','PDFController@loadusermanual');
+
 /*
 |-------------------------------------------------------------------------------
 |dashboard Routes

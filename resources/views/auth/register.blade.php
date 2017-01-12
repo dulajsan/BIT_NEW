@@ -53,24 +53,24 @@ body {
 </style>
 
 @section('content')
-<h1 style="text-align:center"><span class="glyphicon glyphicon-user"></span>&nbsp;<i>BIT-Registration<i></h1>
+<h1 style="text-align:left;margin-left:100px;">&nbsp;<i>BIT-Online-Registration<i></h1>
 <div class="container" style="box-shadow:0 0 4px 0 rgba(0,0,0,.08),0 2px 4px 0 rgba(0,0,0,.12); padding-bottom:12px;">
 
   <div class="col-sm-3" style="background-color:#ccc; height:110%; margin-top:18px;border-left: 15px #2f5989 solid; border-radius:17px">
     <div class="row text-center" style="padding-top:15px">
         <img src="{{asset('/images/logo.png')}}"/>
+        <br/><br/></br/>
+        <a href="{{ url('/manual') }}"><p style="margin-top:20px;color:blue">User Manual</p></a>
         <br/>
-        <p style="margin-top:20px;color:#fff">Registration deadline:</p>
+        <p style="margin-top:20px;color:red;font-size:20px;">Registration deadline:</p>
         <p>10/11/2016</p>
-        <p style="margin-top:20px;color:#fff">User Manual</p>
 
     </div>
 
   </div>
 
   <div class="col-sm-9">
-
-<div class="stepwizard col-sm-12" style="margin-top:15px;">
+<div class="stepwizard col-sm-12" style="margin-top:35px;">
   <div class="row stepwizard-row setup-panel">
     <div class="stepwizard-step">
       <a href="#step-1" type="button" class="btn btn-primary btn-circle" style="width:34px; height:34px; border-radius:28px">1</a>

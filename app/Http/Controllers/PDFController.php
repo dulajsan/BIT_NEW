@@ -53,4 +53,10 @@ class PDFController extends Controller
       $pdf=PDF::loadView('pdf.exam_app');
       return $pdf->stream('exam_app.pdf');
     }
+
+    //user manual for registartion
+    public function loadusermanual(){
+      $pdf=PDF::loadView('pdf.usermanual');
+      return $pdf->stream('usermanual.pdf');
+    }
 }

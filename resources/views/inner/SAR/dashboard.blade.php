@@ -19,6 +19,60 @@
     }
 
     </style>
+
+    <script>
+    $(document).ready(function(){
+        $(".panel-st1").hover(function(){
+          //alert("ok");
+            $(".panel-footer-st1").animate({height: '80px',opacity:1});
+            $(".panel-heading-st1").animate({opacity:1});
+
+        },
+        function(){
+          //alert("ok");
+            $(".panel-footer-st1").animate({height: '50px',opacity:0.6});
+            $(".panel-heading-st1").animate({opacity:0.6});
+        });
+
+        $(".panel-st2").hover(function(){
+          //alert("ok");
+            $(".panel-footer-st2").animate({height: '80px',opacity:1});
+            $(".panel-heading-st2").animate({opacity:1});
+
+        },
+        function(){
+          //alert("ok");
+            $(".panel-footer-st2").animate({height: '50px',opacity:0.6});
+            $(".panel-heading-st2").animate({opacity:0.6});
+        });
+
+        $(".panel-st3").hover(function(){
+          //alert("ok");
+            $(".panel-footer-st3").animate({height: '80px',opacity:1});
+            $(".panel-heading-st3").animate({opacity:1});
+
+        },
+        function(){
+          //alert("ok");
+            $(".panel-footer-st3").animate({height: '50px',opacity:0.6});
+            $(".panel-heading-st3").animate({opacity:0.6});
+        });
+
+        $(".panel-st4").hover(function(){
+          //alert("ok");
+            $(".panel-footer-st4").animate({height: '80px',opacity:1});
+            $(".panel-heading-st4").animate({opacity:1});
+
+        },
+        function(){
+          //alert("ok");
+            $(".panel-footer-st4").animate({height: '50px',opacity:0.6});
+            $(".panel-heading-st4").animate({opacity:0.6});
+        });
+    });
+    </script>
+
+
        <div id="page-wrapper" style="height:800px;">
 
             <div class="container-fluid">
@@ -65,8 +119,8 @@
             </div>
 
             <div class="col-lg-3 col-md-6">
-                   <div class="panel panel-primary panel-st1">
-                       <div class="panel-heading panel-heading-st1">
+                   <div class="panel panel-primary panel-st2">
+                       <div class="panel-heading panel-heading-st2">
                            <div class="row">
                                <div class="col-xs-3">
                                 <img  src="{{ URL::asset('images/dashboard/upload.png') }}" width="80px"/>
@@ -77,7 +131,7 @@
                                </div>
                            </div>
                        </div>
-                           <div class="panel-footer panel-footer-st1">
+                           <div class="panel-footer panel-footer-st2">
                                <span class="pull-left">View Details</span>
                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                <div class="clearfix"></div>
@@ -86,8 +140,8 @@
                </div>
 
                <div class="col-lg-3 col-md-6">
-                      <div class="panel panel-primary panel-st1">
-                          <div class="panel-heading panel-heading-st1">
+                      <div class="panel panel-primary panel-st3">
+                          <div class="panel-heading panel-heading-st3">
                               <div class="row">
                                   <div class="col-xs-3">
                                    <img  src="{{ URL::asset('images/dashboard/result.png') }}" width="80px"/>
@@ -98,7 +152,7 @@
                                   </div>
                               </div>
                           </div>
-                              <div class="panel-footer panel-footer-st1">
+                              <div class="panel-footer panel-footer-st3">
                                   <span class="pull-left">View Details</span>
                                   <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                   <div class="clearfix"></div>
@@ -109,8 +163,8 @@
 
 
                   <div class="col-lg-3 col-md-6">
-                         <div class="panel panel-primary panel-st1">
-                             <div class="panel-heading panel-heading-st1">
+                         <div class="panel panel-primary panel-st4">
+                             <div class="panel-heading panel-heading-st4">
                                  <div class="row">
                                      <div class="col-xs-3">
                                       <img  src="{{ URL::asset('images/dashboard/letters.png') }}" width="80px"/>
@@ -121,7 +175,7 @@
                                      </div>
                                  </div>
                              </div>
-                                 <div class="panel-footer panel-footer-st1">
+                                 <div class="panel-footer panel-footer-st4">
                                      <span class="pull-left">View Details</span>
                                      <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                      <div class="clearfix"></div>

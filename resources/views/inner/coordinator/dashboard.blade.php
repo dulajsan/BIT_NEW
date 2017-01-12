@@ -141,7 +141,7 @@ $(document).ready(function(){
              </div>
 
 
-             <div class="col-lg-3 col-md-6">
+             <div class="col-lg-3 col-md-6" id="user_reg_panel">
                     <div class="panel panel-primary panel-st2">
                         <div class="panel-heading panel-heading-st2">
                             <div class="row">
@@ -163,7 +163,7 @@ $(document).ready(function(){
                 </div>
 
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" id="course_panel">
                        <div class="panel panel-primary panel-st3">
                            <div class="panel-heading panel-heading-st3">
                                <div class="row">
@@ -184,7 +184,7 @@ $(document).ready(function(){
                        </div>
                    </div>
 
-                   <div class="col-lg-3 col-md-6">
+                   <div class="col-lg-3 col-md-6" id="tutes_panel">
                           <div class="panel panel-primary panel-st4">
                               <div class="panel-heading panel-heading-st4">
                                   <div class="row">
@@ -208,7 +208,7 @@ $(document).ready(function(){
 
                     <!--2nd row of tiles-->
                     <div class="row">
-                      <div class="col-lg-3 col-md-6">
+                      <div class="col-lg-3 col-md-6" id="result_panel">
                              <div class="panel panel-primary panel-st5">
                                  <div class="panel-heading panel-heading-st5">
                                      <div class="row">
@@ -230,7 +230,7 @@ $(document).ready(function(){
                          </div>
 
 
-                         <div class="col-lg-3 col-md-6">
+                         <div class="col-lg-3 col-md-6" id="accounting_panel">
                                 <div class="panel panel-primary panel-st6">
                                     <div class="panel-heading panel-heading-st6">
                                         <div class="row">

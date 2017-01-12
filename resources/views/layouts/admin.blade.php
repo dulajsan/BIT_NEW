@@ -70,7 +70,7 @@
 
         .white_backg{
         	background: #FFF;
-            
+
             max-width: 120rem;
             min-width: 390px;
             height: 50rem;
@@ -216,7 +216,7 @@
 
                     <!--dashborad side tab-->
 
-                     <li class="active left_tabs" id="dashboard_admin">
+                     <li class="active left_tabs" id="dashboard_coord">
                         <i class="fa fa-fw fa-dashboard"></i> Dashboard
                     </li>
 
@@ -435,8 +435,16 @@
     <script>
 $(document).ready(function(){
 /** coordinator **/
+
+// dashborad main page
+$("#dashboard_coord").click(function(){
+   $("#contentmain").empty();
+    $("#page-wrapper").empty();
+  $("#page-wrapper").load( "/coorddash #page-wrapper");
+});
+
     //upload tutorial needed for BIT
-    $("#upload").click(function(){
+    $("#upload, #tutes_panel").click(function(){
          $( "#contentmain" ).empty();
          $("#page-wrapper").empty();
          $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/uploadtuto.css') }}') );
@@ -446,7 +454,7 @@ $(document).ready(function(){
 
     //accounting
 
-    $("#accounting").click(function(){
+    $("#accounting, #accounting_panel").click(function(){
          $("#page-wrapper").empty();
          $("#contentmain").empty();
        $( "#page-wrapper").load( "/accounting #page-wrapper");
@@ -463,7 +471,7 @@ $(document).ready(function(){
       //end of edit fees
 
        //new couses and existing courses
-      $("#courses").click(function(){
+      $("#courses, #course_panel").click(function(){
          $("#page-wrapper").empty();
          $( "#contentmain").empty();
        $( "#page-wrapper").load( "/courses #page-wrapper");
@@ -472,7 +480,7 @@ $(document).ready(function(){
 
 
       //filter student
-      $("#filter").click(function(){
+      $("#filter, #user_reg_panel").click(function(){
          $("#page-wrapper").empty();
          $( "#contentmain").empty();
          $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/classic.css') }}') );

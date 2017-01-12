@@ -5,7 +5,21 @@
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
     <link href="{{{asset('/css/classic.css') }}}" rel="stylesheet">
     <link href="{{{asset('/css/resultUpload.css') }}}" rel="stylesheet">
-       <div id="page-wrapper">
+
+    <style>
+    .panel-footer{
+     background-color:#0d2840;
+     color:#fff;
+    }
+
+    .panel-heading{
+      background-color:#3a4454!important;
+      font-size: 20px;
+
+    }
+
+    </style>
+       <div id="page-wrapper" style="height:800px;">
 
             <div class="container-fluid">
 
@@ -29,61 +43,91 @@
 
         <div class="container-fluid">
 
-                <div class="row" id="cnt">
-                <!--calendar-->
-                    <div class="col-md-6">
-                        <div id="calendar" style="background-color:#fff"></div>
+          <div class="col-lg-3 col-md-6">
+                 <div class="panel panel-primary panel-st1">
+                     <div class="panel-heading panel-heading-st1">
+                         <div class="row">
+                             <div class="col-xs-3">
+                              <img  src="{{ URL::asset('images/dashboard/student.png') }}" width="80px"/>
+                             </div>
+                             <div class="col-xs-9 text-right">
+                                 <div class="huge">&nbsp;</div>
+                                 <div>Exam halls</div>
+                             </div>
+                         </div>
+                     </div>
+                         <div class="panel-footer panel-footer-st1">
+                             <span class="pull-left">View Details</span>
+                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                             <div class="clearfix"></div>
+                         </div>
+                 </div>
+            </div>
 
-                    </div>
-                <!--end of calendar-->
-                <div class="col-md-2">
-                </div>
+            <div class="col-lg-3 col-md-6">
+                   <div class="panel panel-primary panel-st1">
+                       <div class="panel-heading panel-heading-st1">
+                           <div class="row">
+                               <div class="col-xs-3">
+                                <img  src="{{ URL::asset('images/dashboard/upload.png') }}" width="80px"/>
+                               </div>
+                               <div class="col-xs-9 text-right">
+                                   <div class="huge">&nbsp;</div>
+                                   <div>Upload results</div>
+                               </div>
+                           </div>
+                       </div>
+                           <div class="panel-footer panel-footer-st1">
+                               <span class="pull-left">View Details</span>
+                               <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                               <div class="clearfix"></div>
+                           </div>
+                   </div>
+               </div>
 
-                 <!--online users-->
-                <div class="col-md-4">
-                     <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> online users</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <tr>
-                                            <td>gfhgfhgfhg</td>
+               <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-primary panel-st1">
+                          <div class="panel-heading panel-heading-st1">
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                   <img  src="{{ URL::asset('images/dashboard/result.png') }}" width="80px"/>
+                                  </div>
+                                  <div class="col-xs-9 text-right">
+                                      <div class="huge">&nbsp;</div>
+                                      <div>Exams</div>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="panel-footer panel-footer-st1">
+                                  <span class="pull-left">View Details</span>
+                                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                  <div class="clearfix"></div>
+                              </div>
+                      </div>
+                  </div>
 
-                                        </tr>
 
-                                        <tr>
-                                            <td>gfhgfhgfhg</td>
 
-                                        </tr>
-
-                                        <tr>
-                                            <td>gfhgfhgfhg</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>gfhgfhgfhg</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>gfhgfhgfhg</td>
-
-                                        </tr>
-                                    </table>
-
-                                </div>
-                                <div class="text-right">
-                                    <a href="#">View All  <i class="fa fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                </div>
-                <!--end of online users-->
-        </div>
-            <!--end of calendar-->
-
+                  <div class="col-lg-3 col-md-6">
+                         <div class="panel panel-primary panel-st1">
+                             <div class="panel-heading panel-heading-st1">
+                                 <div class="row">
+                                     <div class="col-xs-3">
+                                      <img  src="{{ URL::asset('images/dashboard/letters.png') }}" width="80px"/>
+                                     </div>
+                                     <div class="col-xs-9 text-right">
+                                         <div class="huge">&nbsp;</div>
+                                         <div>letters</div>
+                                     </div>
+                                 </div>
+                             </div>
+                                 <div class="panel-footer panel-footer-st1">
+                                     <span class="pull-left">View Details</span>
+                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                     <div class="clearfix"></div>
+                                 </div>
+                         </div>
+                     </div>
 
 
         </div>

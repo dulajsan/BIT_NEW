@@ -17,8 +17,85 @@
 </style>
 
 
+<script>
+$(document).ready(function(){
+    $(".panel-st1").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st1").animate({height: '80px',opacity:1});
+        $(".panel-heading-st1").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st1").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st1").animate({opacity:0.6});
+    });
+
+    $(".panel-st2").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st2").animate({height: '80px',opacity:1});
+        $(".panel-heading-st2").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st2").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st2").animate({opacity:0.6});
+    });
+
+    $(".panel-st3").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st3").animate({height: '80px',opacity:1});
+        $(".panel-heading-st3").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st3").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st3").animate({opacity:0.6});
+    });
+
+    $(".panel-st4").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st4").animate({height: '80px',opacity:1});
+        $(".panel-heading-st4").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st4").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st4").animate({opacity:0.6});
+    });
+
+    $(".panel-st5").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st5").animate({height: '80px',opacity:1});
+        $(".panel-heading-st5").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st5").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st5").animate({opacity:0.6});
+    });
+
+    $(".panel-st6").hover(function(){
+      //alert("ok");
+        $(".panel-footer-st6").animate({height: '80px',opacity:1});
+        $(".panel-heading-st6").animate({opacity:1});
+
+    },
+    function(){
+      //alert("ok");
+        $(".panel-footer-st6").animate({height: '50px',opacity:0.6});
+        $(".panel-heading-st6").animate({opacity:0.6});
+    });
+});
+</script>
+
+
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
-       <div id="page-wrapper">
+       <div id="page-wrapper" style="height:800px">
 
             <div class="container-fluid">
 
@@ -41,7 +118,7 @@
             <!--menu tiles-->
 
         <div class="container-fluid">
-
+          <div class="row">
           <div class="col-lg-3 col-md-6">
                  <div class="panel panel-primary panel-st1">
                      <div class="panel-heading panel-heading-st1">
@@ -65,8 +142,8 @@
 
 
              <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary panel-st1">
-                        <div class="panel-heading panel-heading-st1">
+                    <div class="panel panel-primary panel-st2">
+                        <div class="panel-heading panel-heading-st2">
                             <div class="row">
                                 <div class="col-xs-3">
                                  <img  src="{{ URL::asset('images/dashboard/student.png') }}" width="80px"/>
@@ -77,7 +154,7 @@
                                 </div>
                             </div>
                         </div>
-                            <div class="panel-footer panel-footer-st1">
+                            <div class="panel-footer panel-footer-st2">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
@@ -87,8 +164,8 @@
 
 
                 <div class="col-lg-3 col-md-6">
-                       <div class="panel panel-primary panel-st1">
-                           <div class="panel-heading panel-heading-st1">
+                       <div class="panel panel-primary panel-st3">
+                           <div class="panel-heading panel-heading-st3">
                                <div class="row">
                                    <div class="col-xs-3">
                                     <img  src="{{ URL::asset('images/dashboard/courses.png') }}" width="70px"/>
@@ -99,7 +176,7 @@
                                    </div>
                                </div>
                            </div>
-                               <div class="panel-footer panel-footer-st1">
+                               <div class="panel-footer panel-footer-st3">
                                    <span class="pull-left">View Details</span>
                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                    <div class="clearfix"></div>
@@ -108,8 +185,8 @@
                    </div>
 
                    <div class="col-lg-3 col-md-6">
-                          <div class="panel panel-primary panel-st1">
-                              <div class="panel-heading panel-heading-st1">
+                          <div class="panel panel-primary panel-st4">
+                              <div class="panel-heading panel-heading-st4">
                                   <div class="row">
                                       <div class="col-xs-3">
                                        <img  src="{{ URL::asset('images/dashboard/tutes.png') }}" width="80px"/>
@@ -120,18 +197,20 @@
                                       </div>
                                   </div>
                               </div>
-                                  <div class="panel-footer panel-footer-st1">
+                                  <div class="panel-footer panel-footer-st4">
                                       <span class="pull-left">View Details</span>
                                       <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                       <div class="clearfix"></div>
                                   </div>
                           </div>
                       </div>
+                    </div>
 
-
+                    <!--2nd row of tiles-->
+                    <div class="row">
                       <div class="col-lg-3 col-md-6">
-                             <div class="panel panel-primary panel-st1">
-                                 <div class="panel-heading panel-heading-st1">
+                             <div class="panel panel-primary panel-st5">
+                                 <div class="panel-heading panel-heading-st5">
                                      <div class="row">
                                          <div class="col-xs-3">
                                           <img  src="{{ URL::asset('images/dashboard/result.png') }}" width="80px"/>
@@ -142,7 +221,7 @@
                                          </div>
                                      </div>
                                  </div>
-                                     <div class="panel-footer panel-footer-st1">
+                                     <div class="panel-footer panel-footer-st5">
                                          <span class="pull-left">View Details</span>
                                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                          <div class="clearfix"></div>
@@ -152,8 +231,8 @@
 
 
                          <div class="col-lg-3 col-md-6">
-                                <div class="panel panel-primary panel-st1">
-                                    <div class="panel-heading panel-heading-st1">
+                                <div class="panel panel-primary panel-st6">
+                                    <div class="panel-heading panel-heading-st6">
                                         <div class="row">
                                             <div class="col-xs-3">
                                              <img  src="{{ URL::asset('images/dashboard/accounting.png') }}" width="80px"/>
@@ -164,7 +243,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                        <div class="panel-footer panel-footer-st1">
+                                        <div class="panel-footer panel-footer-st6">
                                             <span class="pull-left">View Details</span>
                                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                             <div class="clearfix"></div>
@@ -172,6 +251,8 @@
                                 </div>
                             </div>
                       <!--./end of menu tiles-->
+                    </div>
+                    <!--./end of 2nd row tiles-->
         </div>
         <!-- /#page-wrapper -->
 

@@ -108,7 +108,7 @@
 									</tr>
 								</thead>
 
-								<tbody id="subject_content">
+								<tbody id="course_content">
 
 								</tbody>
 							</table>

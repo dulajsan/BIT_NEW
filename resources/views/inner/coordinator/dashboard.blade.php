@@ -909,7 +909,7 @@ $(document).ajaxComplete(function(){
 
 
 <script>
-$(document).ready(function abc(){
+(document).ready(function(){
 $.ajaxSetup({
 headers: {
   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -918,64 +918,59 @@ headers: {
 });
 
 
-//subject selection
+//subject load
 
 $(document).ajaxComplete(function(){
 
       $('#subject_content').empty();
-      var sub=document.getElementById('subject_content');
+      var subs=document.getElementById("subject_content");
 
+      $.ajax({
+                      url:"/loadCourses",
+                      type:"POST",
+                      dataType: 'json',
+                      success:function (data, textstatus, jqXHR)
+                      {
+                        var data=data;
+                        alert(data[0].subject_code);
 
-        $.ajax({
-                        url:"/loadCourses",
-                        type:"POST",
-                        success:function (data, textstatus, jqXHR)
+                        for(var t=0;t<data.length;t++)
                         {
-                          var data=data;
-                          $("#num_of_sub").val(data.length);
-                          for(var i=0;i<data.length;i++)
-                          {
-                            var tr=sub.insertRow();
+                          var tr=subs.insertRow(subs.rows.length);
 
-                            var td1=tr.insertCell(0);
-                            td1.innerHTML=data[i].subject_code;
+                          var td1=tr.insertCell(0);
+                          td1.innerHTML=data[t].subject_code;
 
-                            var td2=tr.insertCell(1);
-                            td2.innerHTML=data[i].subject_name;
+                          var td2=tr.insertCell(1);
+                          td2.innerHTML=data[t].subject_name;
 
-                            var td3=tr.insertCell(2);
-                            td3.innerHTML=data[i].compulsory_optional;
+                          var td3=tr.insertCell(2);
+                          td3.innerHTML=data[t].compulsory_optional;
 
-                            var td4=tr.insertCell(3);
-                            td4.innerHTML="R.S. "+data[i].fee+"/=";
+                          var td4=tr.insertCell(3);
+                          td4.innerHTML="R.S. "+data[t].fee+"/=";
 
-
-                            var td5=tr.insertCell(4);
-                            td5.innerHTML="<input type='checkbox' id='sub"+i+"'   value='"+data[i].subject_code+"'/>";
-
-                            var td6=tr.insertCell(5);
-                            td6.innerHTML="<input type='hidden' id='fee"+i+"'   value='"+data[i].fee+"'/>";
-
-
-
-                          }
-
-
-                        },
-
-                        error:function (jqXHR, textstatus, errorThrown)
-                        {
-                            alert(errorThrown);
 
                         }
 
 
-            });
+                      },
+
+                      error:function (jqXHR, textstatus, errorThrown)
+                      {
+                          alert(errorThrown);
+
+                      }
+
+
+          });
+
+
 
   });
 
 
-});
+
 
 
 </script>

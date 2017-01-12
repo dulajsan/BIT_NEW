@@ -352,8 +352,8 @@ $(document).ready(function(){
     $("#get_subject").unbind().click(function(){
 
         var sem=$("#semesters").val();
-        $('#subject_content').empty();
-        var sub=document.getElementById('subject_content');
+        $('#course_content').empty();
+        var sub=document.getElementById('course_content');
 
         if(sem!="select semester"){
 

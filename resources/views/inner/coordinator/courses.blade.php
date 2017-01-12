@@ -318,19 +318,17 @@ div.ppit-tab div.ppit-tab-content:not(.active){
 							<table class="table">
 							<center>
 								<thead>
-
-
 									<tr class="filters">
 										<th><input type="text" class="form-control" placeholder="Year" disabled></th>
 										<th><input type="text" class="form-control" placeholder="Code" disabled></th>
 										<th><input type="text" class="form-control" placeholder="Course" disabled></th>
-										<th><input type="text" class="form-control" placeholder="Remove/Change" disabled></th>
-
 									</tr>
 								</thead>
 
-								<tbody>
-									<tr>
+								<tbody id="subject_content">
+
+
+									<!-- <tr>
 										<td>1</td>
 										<td>1102</td>
 										<td>Programming</td>
@@ -356,7 +354,7 @@ div.ppit-tab div.ppit-tab-content:not(.active){
 											<button class="fbtn-xs" data-toggle="modal" data-target="#modal-edit"><span class="glyphicon glyphicon-edit"></span>Edit</button>
 											<button class="fbtn-xs" data-toggle="modal" data-target="#modal-remove"><span class="glyphicon glyphicon-remove"></span>Remove</button>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</center>
 							</table>

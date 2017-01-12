@@ -1,14 +1,10 @@
 @extends('layouts.admin')
 
-
-
-
 @section('content')
 <div id="page-wrapper">
 <div class="container-fluid">
 <h2>User administration</h2>
 
-<div class="tab">
 
 
 		<ul class="nav nav-tabs">
@@ -21,13 +17,7 @@
 
 		<!--add user tab-->
 			<div id="add" class="tab-pane fade in active">
-				<center>
-					<div class="row" style="height: 30px"></div>
-					<div class="header">
 
-					</div>
-					<div class="row" style="height: 30px"></div>
-				</center>
 
 				<div class="col-sm-9">
 
@@ -183,7 +173,7 @@
 		      <h1 class="page-header">System user filter</h1>
 		    </div>
 		    <div class="row" style="height:30px"></div>
-		  </div>
+
 
 		      <!--user table-->
 		        <section>
@@ -337,14 +327,14 @@
 
 
 
-
+						</div>
 		    <!--end of all tabs-->
 
-			</div>
+
 
 </div>
 </div>
-</div>
+
 
 
 

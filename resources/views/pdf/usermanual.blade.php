@@ -21,14 +21,16 @@
   		<div class="col-sm-2">
 
   		</div>
+      <div class="col-sm-2">
+      <center>	<img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT58enV7UmYmN1hHu6-bV5G-_lAdkiC5kBneuL47BZ6eWJ4YiXp3YcxJdB0kw" alt="UCSC log"></center>
+
+      </div>
   		<div class="col-sm-5">
   			<h1><center>University of Colombo School of Computing</center></h1>
   			<h3><center>Bachelor of Information Technology (BIT)</center></h3>
   			<h4><center>User Manual</center></h4>
   		</div>
-  		<div class="col-sm-2">
-  			<img class="img-responsive" src="ucsc.png" alt="UCSC log">
-  		</div>
+
   		<div class="col-sm-3">
 
   		</div>

@@ -53,7 +53,7 @@ body {
 </style>
 
 @section('content')
-<h1 style="text-align:left;margin-left:100px;">&nbsp;<i>BIT-Online-Registration<i></h1>
+<h1 style="text-align:left;margin-left:100px;color:blue">&nbsp;<i>BIT-Online-Registration<i></h1>
 <div class="container" style="box-shadow:0 0 4px 0 rgba(0,0,0,.08),0 2px 4px 0 rgba(0,0,0,.12); padding-bottom:12px;">
 
   <div class="col-sm-3" style="background-color:#ccc; height:110%; margin-top:18px;border-left: 15px #2f5989 solid; border-radius:17px">
@@ -64,6 +64,10 @@ body {
         <br/>
         <p style="margin-top:20px;color:red;font-size:20px;">Registration deadline:</p>
         <p>10/11/2016</p>
+
+        <br/>
+        For registration inquiry contact<br/>
+        +94711111111
 
     </div>
 

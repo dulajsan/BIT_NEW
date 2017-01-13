@@ -554,4 +554,58 @@ $(document).ajaxComplete(function(){
 <!--./load subjects in exam.blade.php-->
 
 
+
+<!--edit fee-->
+<script>
+
+$(document).ready(function(){
+$.ajaxSetup({
+headers: {
+  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+}
+});
+});
+
+$(document).ajaxComplete(function(){
+  $("#btn_editfee").unbind().click(function(){
+
+    var exam_fee=$("#exam_fee").val();
+    var reg_fee=$("#reg_fee").val();
+    var prov_reg_fee=$("#prov_reg_fee").val();
+    var cert_fee=$("#cert_fee").val();
+    var sur_fee=$("#sur_fee").val();
+    var def_fee=$("#def_fee").val();
+    var pro_fee=$("#pro_fee").val();
+    var sur_fee=$("#sur_fee").val();
+    var pro_fee=$("#pro_fee").val();
+    var other_fee=$("#other_fee").val();
+
+
+
+  //  alert(course_code);
+
+    $.ajax({
+      url:"/editfee",
+      type:"POST",
+      data:"exam_fee="+exam_fee+"&reg_fee="+reg_fee+"&prov_reg_fee="+prov_reg_fee+"&cert_fee="+cert_fee+"&sur_fee="+sur_fee+"&def_fee="+def_fee+"&pro_fee="+pro_fee+"&sur_fee="+sur_fee+"&pro_fee="+pro_fee+"&other_fee="+other_fee;
+      success:function(data, textstatus, jqXHR){
+        alert(data);
+
+
+      },
+      error:function(jqXHR, textstatus, errorThrown){
+        alert(errorThrown);
+
+      }
+
+
+    });
+
+  });
+
+});
+
+</script>
+
+
 @endsection

@@ -222,6 +222,8 @@ Route::get('/courses', function () {
 
 Route::post('/emailval','validateController@validateEmail');
 
+Route::get('/feeedit','FeesController@editFee');
+
 // admin
 
 Route::get('/account','AdminDashboardController@editAccount');

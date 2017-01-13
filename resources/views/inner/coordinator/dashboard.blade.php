@@ -576,20 +576,19 @@ $(document).ajaxComplete(function(){
     var sur_fee=$("#sur_fee").val();
     var def_fee=$("#def_fee").val();
     var pro_fee=$("#pro_fee").val();
-    var sur_fee=$("#sur_fee").val();
-    var pro_fee=$("#pro_fee").val();
     var other_fee=$("#other_fee").val();
-
+    var semid=$('#semid :selected').val();
+    //alert(semid);
 
 
   //  alert(course_code);
-
+    if(semid!="select"){
     $.ajax({
-      url:"/editfee",
-      type:"POST",
-      data:"exam_fee="+exam_fee+"&reg_fee="+reg_fee+"&prov_reg_fee="+prov_reg_fee+"&cert_fee="+cert_fee+"&sur_fee="+sur_fee+"&def_fee="+def_fee+"&pro_fee="+pro_fee+"&sur_fee="+sur_fee+"&pro_fee="+pro_fee+"&other_fee="+other_fee;
+      url:"/feeedit",
+      type:"GET",
+      data:"exam_fee="+exam_fee+"&reg_fee="+reg_fee+"&prov_reg_fee="+prov_reg_fee+"&cert_fee="+cert_fee+"&sur_fee="+sur_fee+"&def_fee="+def_fee+"&pro_fee="+pro_fee+"&sur_fee="+sur_fee+"&pro_fee="+pro_fee+"&other_fee="+other_fee+"&semid="+semid,
       success:function(data, textstatus, jqXHR){
-        alert(data);
+        alert("inserted!");
 
 
       },
@@ -600,6 +599,9 @@ $(document).ajaxComplete(function(){
 
 
     });
+  }else{
+    alert("please select a semester");
+  }
 
   });
 

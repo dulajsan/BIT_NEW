@@ -274,17 +274,9 @@
 
                      @if(Auth::user()->role==1)
 
-                     <!-- dashborad home tab -->
 
                      <li class="active left_tabs" id="dashboard">
                         <i class="fa fa-fw fa-dashboard"></i> Dashboard
-                    </li>
-
-                    <!--end of dashboard home tab-->
-
-
-                    <li class="left_tabs">
-                      <i class="fa fa-fw fa-bar-chart-o"></i> Statistics
                     </li>
 
 
@@ -306,13 +298,16 @@
                           </ul>
                       </li>
 
-                    <li class="left_tabs">
-                      <i class="fa fa-fw fa-wrench"></i> Settings
-                    </li>
 
                     <li class="left_tabs" id="result">
                         <i class="fa fa-fw fa-file"></i> Results
                     </li>
+
+
+                    <li class="left_tabs" id="statistics">
+                        <i class="fa fa-fw fa-bar-chart-o"></i> Statistics
+                    </li>
+
 
                     <li id="idcard" class="left_tabs">
                        <i class="fa fa-fw fa-file"></i>New iD card
@@ -323,9 +318,13 @@
                     </li>
 
                     <li class="left_tabs">
+                      <i class="fa fa-fw fa-wrench"></i> Settings
+                    </li>
+
+                    <li class="left_tabs">
                         <i class="fa fa-fw fa-dashboard"></i>VLE
                     </li>
-                    <li class="left_tabs">
+                    <li class="left_tabs" id="bit">
                         <i class="fa fa-fw fa-dashboard"></i>BIT.lk
                     </li>
 
@@ -525,8 +524,7 @@ $("#dashboard_coord").click(function(){
   $("#result").click(function(){
      $("#contentmain").empty();
       $("#page-wrapper").empty();
-      $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/results.css') }}') );
-    $("#page-wrapper").load( "/results #page-wrapper");
+
  });
 
     //exams
@@ -542,15 +540,16 @@ $("#dashboard_coord").click(function(){
 
     });
 
+    //message
     $("#message").click(function(){
        $("#contentmain").empty();
         $("#page-wrapper").empty();
         $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
       $("#page-wrapper").load( "/messages #page-wrapper");
    });
-    //message
 
-    $("#result").click(function(){
+   //statistics
+    $("#statistics").click(function(){
        $("#contentmain").empty();
         $("#page-wrapper").empty();
         $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/results.css') }}') );

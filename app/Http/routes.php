@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('logout', [ 'uses' => 'Auth\AuthController@getLogout', 'as' => 'logout' ]);
+
 Route::get('/profile',"HomeController@index");
 
 /**edit applicant details**/

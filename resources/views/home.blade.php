@@ -229,7 +229,7 @@
 
 <script>
 
-
+//ajax for confirm slip no and disable account
 $(document).ready(function(){
 
   $.ajaxSetup({
@@ -250,6 +250,7 @@ $(document).ready(function(){
         type:"GET",
         data:{'slips': slip},
         success:function(data, textstatus, jqXHR){
+          //if success then logout and disable account
           window.location="{{URL::to('logout')}}";
 
         },

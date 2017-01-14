@@ -4,7 +4,7 @@
 @section('content')
 
 
-  <div id="page-wrapper" style="height:800px;">
+  <div id="page-wrapper">
 
             <!--containerfluid-->
 

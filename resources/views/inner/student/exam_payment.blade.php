@@ -4,32 +4,41 @@
 @section('content')
 
 
-       <div id="page-wrapper" style="height:800px">
+       <div id="page-wrapper">
          <h2>Payment Details</h2>
          <hr/>
          <div class="container-fluid white_backg">
-           <div class="row">
-             <div class="col-sm-10 col-sm-offset-1" style="background-color:#fff; height:270px">
+           <br/>
 
+             <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">payments</a></li>
+                     <li><a data-toggle="tab" href="#">+</a></li>
 
-           <h2>Enter bank slip Number</h2>
-        <center>
-         <div class="code" style="width: 45%; margin-top:50px">
- 					<input type="text-center" class="form-control" placeholder="Enter the code here" style="height: 80px">
- 				</div>
-        <center>
+                  </ul>
 
- 				<!--when pressed the admission is generated
- 				move to #admission-->
- 				<div class="row" style="width:30px; height:12px"><p> </p></div>
- 						<center>
-                         <ul class="list-inline">
-                             <li><button type="button" class="btn btn-primary" >Continue</button></li>
+                  <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                      <h3>exam payments</h3>
+                      <div class="col-sm-8 col-sm-offset-2">
+                      <div class="form-group">
+                       <label for="usr">Voucher Id:</label>
+                       <input type="text" class="form-control">
+                     </div>
 
-                         </ul>
- 						</center>
-          </div>
+                      <div class="form-group">
+                       <label for="usr">Bank slip No:</label>
+            					<input type="text-center" class="form-control" placeholder="Enter the code here" style="height: 80px">
+                   </div>
+
+                   <button type="button" class="btn btn-primary" style="margin-left:550px;">submit</button>
+                   <br/><br/>
+                  <p>  <b>Note:</b> **Your admission will be enabled only if  confirm the payment.**</p>
+                  </div>
+                    </div>
+
+                  </div>
+
         </div>
-       </div>
+
      </div>
 @endsection

@@ -2,8 +2,9 @@
 @section('content')
 <!--calendar styles-->
 <link rel="stylesheet" type="text/css" href="{{URL::asset('css/calendar.css')}}"/>
-
+<!--dashboard tile stsyles-->
 <style>
+
 .panel-footer{
  background-color:#0d2840;
  color:#fff;
@@ -71,7 +72,7 @@ $(document).ready(function(){
 </script>
 
     <link href="{{{asset('/css/admin.css') }}}" rel="stylesheet">
-       <div id="page-wrapper" style="height:600px">
+       <div id="page-wrapper">
 
             <div class="container-fluid">
 

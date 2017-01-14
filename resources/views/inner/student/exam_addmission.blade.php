@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 
- <div id="page-wrapper" style="height:550px">
+ <div id="page-wrapper">
    <h2>Admission</h2>
    <hr/>
    <!--container-->

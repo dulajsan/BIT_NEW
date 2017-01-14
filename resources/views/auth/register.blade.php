@@ -222,7 +222,7 @@ body {
         <div class="form-group">
             <label class="control-label col-sm-3" for="Lname">Date of birth:</label>
             <div class="col-sm-9">
-              <input type="date" class="form-control" id="dob" name="DOB" required>
+              <input type="text" class="form-control" id="dob" name="DOB" required>
             </div>
         </div>
       </div>
@@ -942,6 +942,16 @@ $(document).ready(function(){
 
 
 </script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--date picker-->
+<script>
+ $( function() {
+   $( "#dob" ).datepicker();
+ } );
+ </script>
+
+ <!--./end of date picker-->
 
 
 

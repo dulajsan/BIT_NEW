@@ -12,7 +12,7 @@
 
              <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">payments</a></li>
-                     <li><a data-toggle="tab" href="#">+</a></li>
+                     <li><a data-toggle="tab" href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
 
                   </ul>
 

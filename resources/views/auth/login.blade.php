@@ -7,7 +7,7 @@
             <div class="panel panel-default" style="box-shadow: 0 0 4px 0 rgba(0,0,0,.08),0 2px 4px 0 rgba(0,0,0,.12);">
                 <div class="panel-heading" style="background-color:#337ab7; height:50px; color:#fff;"><h4>sign in</h4></div>
                 <div class="panel text-center">
-                    <video width="180px" autoplay loop>
+                    <video width="180px"  autoplay loop>
                       <source src="{{{asset('/videos/logo.webm')}}}" type="video/webm">
                       Your browser does not support the video tag.
                     </video>
@@ -80,5 +80,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+    $(document).ready(function(){
+    $(window).on('beforeunload', function() { $("video").hide();$("body").css("background-color", "#a7aaad"); });
+  });
+    </script>
 </div>
 @endsection

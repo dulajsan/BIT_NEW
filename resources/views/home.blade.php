@@ -4,6 +4,10 @@
 <link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
 <style>
 
+.dropdown{
+  background-color: rgba(48, 38, 140, 0.97);
+}
+
 
 .custom_bx{
   border-color: #337ab7;
@@ -213,11 +217,18 @@
             <button type="button" class="list-group-item list-group-item-action active">
               Instructions
             </button>
-            <button type="button" class="list-group-item list-group-item-action" disabled>Edit details</button>
-            <button type="button" class="list-group-item list-group-item-action" disabled>download voucher</button>
-            <button type="button" class="list-group-item list-group-item-action" disabled>download application</button>
-            <button type="button" class="list-group-item list-group-item-action" disabled>Pay relevant amount</button>
-                <button type="button" class="list-group-item list-group-item-action" disabled>enter slip number</button>
+            <h2>Instructions for the Applicant</h2>
+        			<h3 style="color: red;"><b>Important!</b></h3>
+        			<h4>This is a temporary account for you till the registration.</h4>
+
+              <ul>
+            		<li>Click <mark style="color:blue;font-weight:bold"> Edit Details </mark> to change your basic contact information other than the authentication details.</li>
+            		<li>Click <mark style="color:blue;font-weight:bold">Downlad Voucher</mark> which is for UCSC, Bank & for You.</li>
+            		<li>Click <mark style="color:blue;font-weight:bold">Download Application</mark> which is used to handover to UCSC along with the payment voucher on the Registration Day.</li>
+            		<li>After payments, enter the slip number in the given space to confirm the payments.</li>
+
+
+            	</ul>
           </div>
         <!--./instruction-->
 

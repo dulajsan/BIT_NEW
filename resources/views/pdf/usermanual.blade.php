@@ -53,7 +53,7 @@
 
 			<div class="container" >
 
-				<img class="img-responsive" src="full name.png" alt="fullname">
+				<img class="img-responsive" src="https://drive.google.com/open?id=0B7o6h_VN7aC4R2hIZ3F3eVV3dEU" alt="fullname">
 			</div>
 
 
@@ -63,7 +63,7 @@
 			<li><b><u>1.1.b. Initials</u></b></li>
 				<p>Then click on the next blank box and type your initials.</p>
 				<p>    Eg:- M.D</p>
-				<img class="img-responsive" src="initials.PNG" float="right"> </br></br></br>
+				<img class="img-responsive" src="https://lh5.googleusercontent.com/4GPqtH_2k3RwTX-yJ261Oa3MjE0QnuqlptdnQo7meeNED65kUpcMmYBoNn6rK7hMXlcRt1OZ=w1366-h638" float="right"> </br></br></br>
 
 			<li><b><u>1.1.c. Last Name</u></b></li>
 				<p> Enter your last name in the box given in front of the ‘Last Name’ label.</p>

@@ -416,14 +416,14 @@ $("#get_cost").unbind().click(function(){
   $(document).ajaxComplete(function(){
     $("#nic_btn").unbind().click(function(){
       var reason=$("#nic_reason").val();
-      //alert(reason);
+
 
       $.ajax({
         url:"/idRequest",
         type:"GET",
         data:"reason="+reason,
         success:function(data, textstatus, jqXHR){
-          alert(data);
+          alert("inserted!");
 
 
         },

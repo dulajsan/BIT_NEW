@@ -12,8 +12,6 @@
 </div>
 
   <div class="container-fluid white_backg">
-
-
         <div class="wizard">
                 <ul class="nav nav-wizard">
 

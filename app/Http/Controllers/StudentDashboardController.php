@@ -37,17 +37,16 @@ class StudentDashboardController extends Controller
 		/**
 		 * new id card request.
 		 *
-		 * @return \Illuminate\Http\Response
+		 *
 		 */
 
 			public function id_Request(Request $request){
+				$id=Auth::id();
 				$idRequest=new IdRequest;
 				$idRequest->reason=$request->reason;
-				 $id=Auth::id();
 				 $idRequest->request_by=$id;
 				 $idRequest->save();
-
-
+				 return $idRequest;
 
 			}
 

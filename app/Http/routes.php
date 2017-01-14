@@ -55,7 +55,7 @@ Route::get('/exam2', function () {
 
 
 
-Route::group(['middleware'=>'web'],function(){
+Route::group(['middlewareGroups'=>'web'],function(){
   Route::auth();
 
 });

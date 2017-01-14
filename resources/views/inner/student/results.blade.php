@@ -1,9 +1,14 @@
 @extends('layouts.admin')
-
+<style>
+.highcharts-credits{
+  fill:#fff !important;
+}
+</style>
 
 @section('content')
 
 <div id="page-wrapper">
+  <div class="container-fluid">
   <section class="white_backg">
 <input type="radio" id="profile" value="1" name="tractor" checked='checked' />
 <input type="radio" id="settings" value="2" name="tractor" />
@@ -108,31 +113,18 @@
 </section>
 
 
+<br/><br/></br>
+<section class="white_backg">
 
+    <!--show overall gpa-->
 
-<div class="container-fluid">
-<div class="row" >
-    <div class="col-sm-3" id="year11" >
+      <div class="col-sm-12" id="year11" >
+      </div>
 
-    </div>
-
-    <div class="col-sm-3" id="year22">
-
-    </div>
-
-    <div class="col-sm-3" id="year33">
-
-    </div>
-
-    <div class="col-sm-3" id="year44">
-
-    </div>
-
+  <!--./end of show overall gpa-->
+</section>
 </div>
-
-
 </div>
-
 </div>
 
 @endsection

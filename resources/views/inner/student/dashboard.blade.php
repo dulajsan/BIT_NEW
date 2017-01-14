@@ -17,71 +17,6 @@
 
 </style>
 
-<script type="text/javascript">
-
-    $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js',function(){
-
-  var date = new Date();
-  var d = date.getDate();
-  var m = date.getMonth();
-  var y = date.getFullYear();
-
-  $('#calendar').fullCalendar({
-    header: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'month,agendaWeek,agendaDay'
-    },
-    editable: true,
-    events: [
-      {
-        title: 'All Day Event',
-        start: new Date(y, m, 1)
-      },
-      {
-        title: 'Long Event',
-        start: new Date(y, m, d-5),
-        end: new Date(y, m, d-2)
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: new Date(y, m, d-3, 16, 0),
-        allDay: false
-      },
-      {
-        id: 999,
-        title: 'Repeating Event',
-        start: new Date(y, m, d+4, 16, 0),
-        allDay: false
-      },
-      {
-        title: 'Meeting',
-        start: new Date(y, m, d, 10, 30),
-        allDay: false
-      },
-      {
-        title: 'Lunch',
-        start: new Date(y, m, d, 12, 0),
-        end: new Date(y, m, d, 14, 0),
-        allDay: false
-      },
-      {
-        title: 'Birthday Party',
-        start: new Date(y, m, d+1, 19, 0),
-        end: new Date(y, m, d+1, 22, 30),
-        allDay: false
-      },
-      {
-        title: 'Click for Google',
-        start: new Date(y, m, 28),
-        end: new Date(y, m, 29),
-        url: 'http://google.com/'
-      }
-    ]
-  });
-})
-</script>
 
 <script>
 $(document).ready(function(){
@@ -530,7 +465,7 @@ $(document).ajaxComplete
         },
         yAxis: {
             title: {
-                text: 'results'
+                text: 'GPA'
             },
             plotLines: [{
                 value: 0,
@@ -539,7 +474,7 @@ $(document).ajaxComplete
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: 'points'
         },
         legend: {
             layout: 'vertical',
@@ -573,7 +508,7 @@ $(document).ajaxComplete
         },
         yAxis: {
             title: {
-                text: 'results'
+                text: 'GPA'
             },
             plotLines: [{
                 value: 0,
@@ -582,7 +517,7 @@ $(document).ajaxComplete
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: 'points'
         },
         legend: {
             layout: 'vertical',
@@ -616,7 +551,7 @@ $(document).ajaxComplete
         },
         yAxis: {
             title: {
-                text: 'results'
+                text: 'GPA'
             },
             plotLines: [{
                 value: 0,
@@ -625,7 +560,7 @@ $(document).ajaxComplete
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: 'points'
         },
         legend: {
             layout: 'vertical',
@@ -659,7 +594,7 @@ $(document).ajaxComplete
         },
         yAxis: {
             title: {
-                text: 'results'
+                text: 'GPA'
             },
             plotLines: [{
                 value: 0,
@@ -688,7 +623,7 @@ $(document).ajaxComplete
 (function () {
     $('#year11').highcharts({
         title: {
-            text: '1st YEAR',
+            text: 'Overall GPA',
             x: 0 //center
         },
         subtitle: {
@@ -696,12 +631,11 @@ $(document).ajaxComplete
             x: 0
         },
         xAxis: {
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9']
+            categories: ['1', '2', '3', '4', '5', '6']
         },
         yAxis: {
             title: {
-                text: 'results'
+                text: 'GPA'
             },
             plotLines: [{
                 value: 0,
@@ -710,7 +644,7 @@ $(document).ajaxComplete
             }]
         },
         tooltip: {
-            valueSuffix: '°C'
+            valueSuffix: 'point'
         },
         legend: {
             layout: 'vertical',
@@ -725,138 +659,6 @@ $(document).ajaxComplete
     });
 });
 </script>
-
-<script>
-$(document).ajaxComplete
-(function () {
-    $('#year22').highcharts({
-        title: {
-            text: '2nd YEAR',
-            x: 0 //center
-        },
-        subtitle: {
-
-            x: 0
-        },
-        xAxis: {
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9']
-        },
-        yAxis: {
-            title: {
-                text: 'results'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-
-            data: [2,5,11,12,6,9,6,7,8]
-        }]
-    });
-});
-</script>
-
-
-<script>
-$(document).ajaxComplete
-(function () {
-    $('#year33').highcharts({
-        title: {
-            text: '3rd YEAR',
-            x: 0 //center
-        },
-        subtitle: {
-
-            x: 0
-        },
-        xAxis: {
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9']
-        },
-        yAxis: {
-            title: {
-                text: 'results'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-
-            data: [2,5,11,12,6,9,6,7,8]
-        }]
-    });
-});
-</script>
-
-
-<script>
-$(document).ajaxComplete
-(function () {
-    $('#year44').highcharts({
-        title: {
-            text: '4th YEAR',
-            x: 0 //center
-        },
-        subtitle: {
-
-            x: 0
-        },
-        xAxis: {
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9']
-        },
-        yAxis: {
-            title: {
-                text: 'results'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-
-            data: [2,5,11,12,6,9,6,7,8]
-        }]
-    });
-});
-</script>
-
 
 
   <!--./results-->
@@ -898,7 +700,7 @@ $.ajaxSetup({
 
       if(data.length>0)
         //  $("#chat-window").html('<br><div>'+data+'</div><br>');
-        
+
 
     });
 

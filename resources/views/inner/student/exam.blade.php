@@ -4,13 +4,13 @@
 @section('content')
 
 
-       <div id="page-wrapper">
+  <div id="page-wrapper" style="height:800px;">
 
             <!--containerfluid-->
 
-        <div class="container-fluid">
+  <div class="container-fluid">
 
-          <div class="row">
+  <div class="row">
 		<section>
         <div class="wizard">
 
@@ -193,10 +193,11 @@
 					<center>
 					<div class="row">
             <div class="download">
-							<a href = "{{url('/getExamApp')}}" class = "btn btn-default btn-lg" role = "button" style=" font-color: white"><h4>Application</h4></a>
+							<a href = "{{url('/getExamApp')}}" class = "btn btn-default btn-lg" role = "button" style=" font-color: white"><h4><span class="glyphicons glyphicons-download-alt"></span>Application</h4></a>
 						</div>
+            <br/><br/>
 						<div class="download">
-							<a href = "{{url('/getVouch')}}" class = "btn btn-default btn-lg" role = "button" style=" font-color: white"><h4>Voucher</h4></a>
+							<a href = "{{url('/getVouch')}}" class = "btn btn-default btn-lg" role = "button" style=" font-color: white"><span class="glyphicons glyphicons-download-alt"></span><h4>Voucher</h4></a>
 						</div>
 					</div>
 					</center>
@@ -214,35 +215,7 @@
 
 </div>
 
-
-
-
-                    <!-- <div class="tab-pane" id="step4">
-                        <div class="row" style="height:50px"></div>
-
-				<div class="get-voucher">
-					<div class="row">
-						<h4>Download the Admission</h4>
-					</div>
-
-					<center>
-					<div class="row">
-						<div class="download">
-							<a href = "#" class = "btn btn-default btn-lg" role = "button" style="font-color: white" disabled><h4>Admission</h4></a>
-						</div>
-					</div>
-					</center>
-				</div>
-
-				<div class="row" style="height:30px"><p> </p></div>
-				<div class="note">
-					<p>*note<br>
-					Download the exam application and get a printout of it. <br>
-					Do not forget to bring the admission sheet to the exam hall. Submit the admission to the examiner.<br>
-					<h4>Best of LUCK for the exam!</h4></p>
-				</div>
-                    </div> -->
-                    <div class="clearfix"></div>
+                  <div class="clearfix"></div>
                 </div>
             </form>
         </div>

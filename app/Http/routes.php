@@ -37,7 +37,7 @@ Route::get("/updateprof","EditApplicantController@update");
 
 //confirm applicant slip no
 
-Route::post("/addslip","EditApplicantController@add_slip");
+Route::get("/addslip","EditApplicantController@add_slip");
 
 
 /* exam application*/

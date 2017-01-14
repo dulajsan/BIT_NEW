@@ -160,14 +160,15 @@ class EditApplicantController extends Controller
 
       $id = Auth::id();
       $users = User::find($id);
-      $applicants=Applicant::where('user_user_id',$id);
-      $users->save();
 
-      $applicants->slip_no = $request->slips;
-      $users->applicant()->save($applicants);
-      // $applicants->update();
+      $users->live=0;
+      $users->save();
+      return $users;
+
+
+      //$applicants->update();
       //  return response()->json(['response' => 'This is post method']);
-       return "ok";
+      //return Redirect::to('/logout');
 
 
    }

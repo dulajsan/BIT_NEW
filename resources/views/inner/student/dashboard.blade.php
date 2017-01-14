@@ -898,6 +898,7 @@ $.ajaxSetup({
 
       if(data.length>0)
         //  $("#chat-window").html('<br><div>'+data+'</div><br>');
+        
 
     });
 

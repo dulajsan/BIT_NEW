@@ -19,23 +19,23 @@ class RedirectIfAuthenticated
     {
       $id=Auth::id();
       $user = User::find($id);
-        if (Auth::guard($guard)->check() && $user->role== '0') {
+        if (Auth::guard($guard)->check() && $user->role== '0' && $user->live=='1') {
             return redirect('/profile');
         }
 
-        elseif (Auth::guard($guard)->check() && $user->role== '1') {
+        elseif (Auth::guard($guard)->check() && $user->role== '1' && $user->live=='1') {
           return redirect('dashboard');
         }
 
-        elseif (Auth::guard($guard)->check() && $user->role== '2') {
+        elseif (Auth::guard($guard)->check() && $user->role== '2' && $user->live=='1') {
             return redirect('/admindash');
         }
 
-        elseif (Auth::guard($guard)->check() && $user->role== '3') {
+        elseif (Auth::guard($guard)->check() && $user->role== '3' && $user->live=='1') {
           return redirect('/sardash');
         }
 
-        elseif (Auth::guard($guard)->check() && $user->role== '4') {
+        elseif (Auth::guard($guard)->check() && $user->role== '4' && $user->live=='1') {
           return redirect('/coorddash');
         }
 

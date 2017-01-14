@@ -65,24 +65,24 @@ class AuthController extends Controller
 
        $user = User::find($id);
         //student
-        if($user->role== '1') {
+        if($user->role== '1' && $user->live=='1') {
             return redirect('dashboard');
         }
         //applicant
-        elseif ($user->role=='0') {
+        elseif ($user->role=='0' && $user->live=='1') {
             return redirect('/profile');
         }
         //admin
-        elseif ($user->role=='2') {
+        elseif ($user->role=='2' && $user->live=='1') {
             return redirect('/admindash');
         }
         //SAR
-        elseif ($user->role=='3') {
+        elseif ($user->role=='3' && $user->live=='1') {
             return redirect('/sardash');
         }
 
         //coordinator
-        elseif ($user->role=='4') {
+        elseif ($user->role=='4' && $user->live=='1') {
             return redirect('/coorddash');
         }
 

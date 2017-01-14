@@ -4,12 +4,12 @@
 @section('content')
 
 
-       <div id="page-wrapper" style="height:550px">
+       <div id="page-wrapper" style="height:800px">
          <h2>Payment Details</h2>
          <hr/>
-         <div class="container-fluid">
+         <div class="container-fluid white_backg">
            <div class="row">
-             <div class="col-sm-8 col-sm-offset-2" style="background-color:#fff; height:270px">
+             <div class="col-sm-10 col-sm-offset-1" style="background-color:#fff; height:270px">
 
 
            <h2>Enter bank slip Number</h2>

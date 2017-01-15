@@ -426,6 +426,40 @@
                     @endif
 
 
+                    <!--
+                    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                             director director director director
+                     |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                             -->
+
+                      @if(Auth::user()->role==5)
+
+                      <li class="left_tabs">
+                          <i class="fa fa-fw fa-bar-chart-o"></i>Applicant Details
+                      </li>
+
+                      <li class="left_tabs">
+                          <i class="fa fa-fw fa-bar-chart-o"></i>Institute details
+                      </li>
+
+
+                      <li class="left_tabs">
+                          <i class="fa fa-fw fa-bar-chart-o"></i>Account
+                      </li>
+
+                      <li class="left_tabs">
+                          <i class="fa fa-fw fa-dashboard"></i>VLE
+                      </li>
+                      <li class="left_tabs">
+                          <i class="fa fa-fw fa-dashboard"></i>BIT.lk
+                      </li>
+
+
+
+
+                      @endif
+
+
 
                 </ul>
             </div>

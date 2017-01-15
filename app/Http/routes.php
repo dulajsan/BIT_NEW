@@ -126,6 +126,12 @@ Route::get('/coorddash','CoordDashboardController@index');
 
 //student|||||||||||||||||||||
 
+
+//gpa summary
+Route::get('/gpasummery','StudentgpaController@index');
+
+Route::get('/sub_results','SubresultsController@index');
+
 Route::get('/st_exam', function () {
     return view('inner/student/exam');
 });
@@ -230,16 +236,16 @@ Route::get('/feeedit','FeesController@editFee');
 
 Route::get('/account','AdminDashboardController@editAccount');
 
-Route::get('/manage_users', function () {
-    return view('inner/admin/manage_users');
-});
-Route::post('/addUser','manageUser@store');
-
-Route::get("/create",'manageUser@index');
-
-Route::get('/userfilter','manageUser@filterUser');
-
-Route::post('/editUserData','manageUser@update');
+// Route::get('/manage_users', function () {
+//     return view('inner/admin/manage_users');
+// });
+// Route::post('/addUser','manageUser@store');
+//
+// Route::get("/create",'manageUser@index');
+//
+// Route::get('/userfilter','manageUser@filterUser');
+//
+// Route::post('/editUserData','manageUser@update');
 
 
 //-------------------------------------------------------------

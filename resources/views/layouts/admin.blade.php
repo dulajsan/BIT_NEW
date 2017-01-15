@@ -37,6 +37,7 @@
     <script type="text/javascript" src="{{asset('js/metisMenu.js')}}"></script>
 
 
+
     <style>
         body {
             font-family: 'Lato';
@@ -299,9 +300,23 @@
                       </li>
 
 
-                    <li class="left_tabs" id="result">
+                      <li>
+                            <span href="javascript:;" class="left_tabs" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-arrows-v"></i> Results<i class="fa fa-fw fa-caret-down"></i></span>
+                            <ul id="demo1" class="collapse">
+                                <li class="left_tabs" id="subresult" style="border:none;">
+                                  <i class="fa"></i> view results
+                                </li>
+                                <li class="left_tabs" style="border:none" id="gpasummary">
+                                    <i class="fa"></i>GPA summary
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    <!-- <li class="left_tabs" id="result">
                         <i class="fa fa-fw fa-file"></i> Results
-                    </li>
+                    </li> -->
 
 
                     <li class="left_tabs" id="statistics">
@@ -520,12 +535,22 @@ $("#dashboard_coord").click(function(){
      $("#page-wrapper").load( "/exam_admission #page-wrapper");
   });
 
-  //results
-  $("#result").click(function(){
+  //sub results
+  $("#subresult").click(function(){
      $("#contentmain").empty();
       $("#page-wrapper").empty();
+      $("#page-wrapper").load( "/sub_results #page-wrapper");
 
  });
+
+ //gpa summary
+ $("#gpasummary").click(function(){
+    $("#contentmain").empty();
+     $("#page-wrapper").empty();
+    $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/gpa.css') }}') );
+     $("#page-wrapper").load( "/gpasummery #page-wrapper");
+
+});
 
     //exams
       $("#exam").click(function(){
@@ -544,7 +569,7 @@ $("#dashboard_coord").click(function(){
     $("#message").click(function(){
        $("#contentmain").empty();
         $("#page-wrapper").empty();
-        $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
+      //  $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
       $("#page-wrapper").load( "/messages #page-wrapper");
    });
 
@@ -606,7 +631,7 @@ $("#dashboard_coord").click(function(){
         $("#account").click(function(){
              $( "#contentmain" ).empty();
              $("#page-wrapper").empty();
-           $( "#page-wrapper").load( "/account #page-wrapper");
+           //$( "#page-wrapper").load( "/account #page-wrapper");
         });
 
         //manage users of the system

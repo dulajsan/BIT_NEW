@@ -82,12 +82,22 @@ $(document).ready(function(){
                         <h1 class="page-header">
                             Student <small>-Dashboard</small>
                         </h1>
-                        <ol class="breadcrumb">
+                        <!-- <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                        </ol>
+                        </ol> -->
                     </div>
+                    <div class="row">
+                    @if(sizeof($students) > 0)
+
+                    <div class="col-lg-12" >
+                      <div class="alert alert-info col-lg-4 col-lg-offset-4" role="alert"><strong>NOTICE</strong><br>                      @foreach($students as $student)
+                      {{$student->important_message}} <br> @endforeach<br></div>
+
+                    </div>
+                    @endif
+                  </div>
                 </div>
             </div>
 

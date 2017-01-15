@@ -158,25 +158,19 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"><span class="label label-pill label-danger" id="number" background-color="#d58512"></span></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown" >
                         <li>
-                            <a href="#">Alert one <span class="label label-default">Alert</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert two <span class="label label-primary">Alert </span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert three <span class="label label-success">Alert</span></a>
+                            <table id="message-table">
+                            </table>
                         </li>
 
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
                     </ul>
                 </li>
+
+            
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @if (Auth::user()->role==2) Admin @else dulaj @endif <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -694,6 +688,68 @@ $("#dashboard_coord").click(function(){
 
 });
 </script>
+
+<script>
+ $(document).ready(function(){
+  $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+  });
+  });
+
+
+$(document).ready(function(){
+
+
+     var tableId=document.getElementById("message-table");
+
+     $.ajax({
+
+                url:"/notification_add",
+                type:"GET",
+
+                success:function (data, textstatus, jqXHR)
+
+                {
+                    if(data.length>0)
+                        $('#number').html(data.length);
+                    else
+                        $('#number').html('');
+
+
+                    for(var i=0;i<data.length;i++)
+                    {
+
+
+                        var tr = tableId.insertRow(i);
+                        var td = tr.insertCell(0);
+                        td.innerHTML="<li><a class='message-item' href='#'></li>"+data[i].other_message+"</a>";
+
+                    }
+
+
+
+
+                },
+
+                  error:function (jqXHR, textstatus, errorThrown)
+                  {
+                      alert(errorThrown);
+                  }
+
+
+       });
+
+       });
+
+
+
+
+  </script>
+
+<!--notification load-->
+
 
 
 </body>

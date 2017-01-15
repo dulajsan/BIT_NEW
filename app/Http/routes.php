@@ -168,6 +168,9 @@ Route::get('/messages', function () {
     return view('inner/student/messages');
 });
 
+Route::get('/notification_add','NotificationController@notification_add');
+
+
 //send message
 Route::post('/sendMessage','StudentDashboardController@sendMessage');
 

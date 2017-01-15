@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Redirect;
 use App\Result;
 use DB;
 use Auth;
@@ -27,7 +28,8 @@ class ExcelController extends Controller
 
 
       });
-      echo "import";
+      return Redirect::to('/sardash');
+
     }
 
   catch(\Exception $e){

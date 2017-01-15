@@ -9,6 +9,9 @@ use App\IdRequest;
 use Auth;
 use App\Chat_message;
 use App\Chat;
+use App\Student;
+use App\Notification;
+
 
 class StudentDashboardController extends Controller
 {
@@ -28,10 +31,22 @@ class StudentDashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('inner/student/dashboard');
-    }
+		 public function index()
+	     {
+	     	$id = Auth::id();
+	     	$s= Student::where('user_user_id',$id)->first();
+	     	$msg = $s->enable_exam;
+
+	     	if($msg==1){
+	 	 	$students = Notification::where('user_user_id',$id)->get();
+	         return view('inner/student/dashboard')->with('students',$students);
+	     }else{
+	     	return view('inner/student/dashboard')->with('students',$students);
+	     }
+	     }
+
+
+
 
 
 		/**

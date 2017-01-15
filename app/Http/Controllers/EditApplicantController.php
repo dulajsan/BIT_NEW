@@ -106,14 +106,15 @@ class EditApplicantController extends Controller
         $users->last_name=$request->last_name;
         $users->title=$request->title;
         $users->sex=  $request->sex;
+
         $users->save();
 
         $applicants->citizenship=$request->citizenship;
         $applicants->DOB=$request->dob;
-        $applicants->save();
+        //$applicants->save();
 
-      //  $users->applicant()->save($applicants);
-        return  index();
+        $users->applicant()->save($applicants);
+        //return  $users;
 
     }
 

@@ -39,6 +39,10 @@ class RedirectIfAuthenticated
           return redirect('/coorddash');
         }
 
+        elseif (Auth::guard($guard)->check() && $user->role== '5' && $user->live=='1') {
+          return redirect('/dirddash');
+        }
+
         return $next($request);
     }
 }

@@ -503,7 +503,7 @@ $(document).ajaxComplete(function(){
 
       $.ajax({
                       url:"/loadCourses",
-                      type:"POST",
+                      type:"GET",
                       dataType: 'json',
                       success:function (data, textstatus, jqXHR)
                       {

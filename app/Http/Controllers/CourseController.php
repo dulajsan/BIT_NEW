@@ -25,9 +25,11 @@ class CourseController extends Controller
 
 
     public function loadCourse(Request $request){
-      $subjects=Subject::all();
-      return $subjects;
-     //return response()->json($subjects);
+        if($request->ajax()){
+          $subjects=Subject::all();
+      //return $subjects;
+            return response()->json($subjects);
+        }
 
 
 

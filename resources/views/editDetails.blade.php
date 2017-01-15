@@ -55,17 +55,7 @@
 
     });
 
-      //is_nic
-    $("#icn_isnic").click(function(){
-      $("#t_nic").prop('disabled',false);
-      $("#t_passport").prop('disabled',false);
 
-    });
-    //nic
-     $("#icn_nic").click(function(){
-      $("#t_nic").prop('disabled',false);
-
-    });
 
       $("#icn_dob").click(function(){
       $("#t_dob").prop('disabled',false);
@@ -95,8 +85,6 @@
       var title= $("#t_title").val();
       var sex=$("input[name=sex]:checked").val();
       var citizenship=$("#t_citizenship").val();
-      var isnic=$("input[name=is_nic]:checked").val();
-      var nic=$("#nic").val();
       var dob=$("#t_dob").val();
 
 
@@ -105,7 +93,7 @@
 $.ajax({
                 url:"updateprof",
                 type:"GET",
-                data:"full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob,
+                data:"full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&dob="+dob,
                 success:function (data, textstatus, jqXHR)
                 {
                     alert("updated");
@@ -334,7 +322,7 @@ $.ajax({
                                         </label>
                                       <label class="radio-inline"><input type="radio" id="t_passport" name="is_nic" value="passport" @if ($user->is_nic=='passport')checked @endif  disabled>Passport No</label>
                                       </div>
-                                       <span class=" col-md-1 glyphicon glyphicon-edit" id="icn_isnic"></span>
+                                       <!-- <span class=" col-md-1 glyphicon glyphicon-edit" id="icn_isnic"></span> -->
                                     </div>
 
                                     <!--nic/passport no-->
@@ -344,7 +332,7 @@ $.ajax({
                                         <input type="text" class="form-control" id="nic" id="t_nic" placeholder="93*******V" name="nic" value="{{$user->nic_passport}}" disabled>
 
                                       </div>
-                                       <span class=" col-md-1 glyphicon glyphicon-edit" id="icn_nic"></span>
+                                       <!-- <span class=" col-md-1 glyphicon glyphicon-edit" id="icn_nic"></span> -->
                                     </div>
 
                                     @endforeach

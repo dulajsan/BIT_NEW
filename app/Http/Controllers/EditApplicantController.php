@@ -99,22 +99,20 @@ class EditApplicantController extends Controller
         //return response()->json(['name' => 'Abigail', 'state' => 'CA']);
          $id = Auth::id();
         $users = User::find($id);
-        $applicants=Applicant::where('user_user_id',$id);
+        $applicants=Applicant::where('user_user_id',$id)->first();
 
         $users->full_name=$request->full_name;
         $users->initials=$request->initials;
         $users->last_name=$request->last_name;
         $users->title=$request->title;
         $users->sex=  $request->sex;
-        $users->is_nic=$request->isnic;
-        $users->nic_passport=$request->nic;
         $users->save();
 
         $applicants->citizenship=$request->citizenship;
         $applicants->DOB=$request->dob;
-        //$applicants->save();
+        $applicants->save();
 
-        $users->applicant()->save($applicants);
+      //  $users->applicant()->save($applicants);
         return  index();
 
     }

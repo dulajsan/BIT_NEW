@@ -21,16 +21,14 @@
   		<div class="col-sm-2">
 
   		</div>
-      <div class="col-sm-2">
-      <center>	<img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT58enV7UmYmN1hHu6-bV5G-_lAdkiC5kBneuL47BZ6eWJ4YiXp3YcxJdB0kw" alt="UCSC log"></center>
-
-      </div>
   		<div class="col-sm-5">
   			<h1><center>University of Colombo School of Computing</center></h1>
   			<h3><center>Bachelor of Information Technology (BIT)</center></h3>
   			<h4><center>User Manual</center></h4>
   		</div>
-
+  		<div class="col-sm-2">
+  			<img class="img-responsive" src="https://lh6.googleusercontent.com/fru6VKNcVW-gwgq6BgP52dm2axd0qNKMjUOlRENmDh4Y97dEPQoeJ47BD3wsViw9qVp3CG6R=w1108-h619" alt="UCSC log">
+  		</div>
   		<div class="col-sm-3">
 
   		</div>
@@ -42,6 +40,7 @@
 	<li><b><u>Registration</u></b></li>
 	<p>In the home page of UCSC External Degrees Centre there is tab for ‘Registration’ and now you are inside in it. </p>
 	<p>This is the screen now appear in your browser.</p>
+	<img class="img-responsive" src="https://lh5.googleusercontent.com/yPK__gKeBsd9VgUpmZt50qbBYGzZCxJss4p38PCYu0fFcHiQ93N2V4K9eGzJh3VUO4jgwM6Y=w1108-h619" alt="home">
 	<p>You can simply create your account through 4 steps.</p>
 	<ol>
 		<li><b><u>1.1.User Details</u></b></li>
@@ -53,7 +52,7 @@
 
 			<div class="container" >
 
-				<img class="img-responsive" src="https://drive.google.com/open?id=0B7o6h_VN7aC4R2hIZ3F3eVV3dEU" alt="fullname">
+				<img class="img-responsive" src="https://lh3.googleusercontent.com/oBLA0OW8wG3RINSJ5j3VzDYtDKlgpU8vpFXul0qBoBO-UGf9Ea_ZJe2LKXQzxEhuidEQ9Q2N=w1108-h619" alt="fullname">
 			</div>
 
 
@@ -63,12 +62,12 @@
 			<li><b><u>1.1.b. Initials</u></b></li>
 				<p>Then click on the next blank box and type your initials.</p>
 				<p>    Eg:- M.D</p>
-				<img class="img-responsive" src="https://lh5.googleusercontent.com/4GPqtH_2k3RwTX-yJ261Oa3MjE0QnuqlptdnQo7meeNED65kUpcMmYBoNn6rK7hMXlcRt1OZ=w1366-h638" float="right"> </br></br></br>
+				<img class="img-responsive" src="https://lh4.googleusercontent.com/T7IgeGh8cVkcR_AwdNXigfZ8fCvkA6cbs42ksbLehrRjTmoszIsnc2Jw1zyZIgymjp5x3DIg=w1108-h619" float="right"> </br></br></br>
 
 			<li><b><u>1.1.c. Last Name</u></b></li>
 				<p> Enter your last name in the box given in front of the ‘Last Name’ label.</p>
 				<p>    Eg:- Sanjaya</p>
-				<img class="img-responsive" src="lastname.PNG" float="right"> </br></br></br>
+				<img class="img-responsive" src="https://lh4.googleusercontent.com/zvUTkrhuu2uL7F2apB50lmpqAyAsmE0EcKSdwymEBUmoWJi4bolfvjoy9G0E0UN9JgoBY05V=w1108-h619" float="right"> </br></br></br>
 
 			<li><b><u>1.1.d. Title</u></b></li>
 				<p>Click the sign in the right corner of the label and Select the title relevant for you. Place your mouse pointer on the relevant title so that it would be highlighted, then click or press the Enter button.</p>
@@ -80,7 +79,7 @@
 
 			<li><b><u>1.1.e. Sex</u></b></li>
 				 <p>Select the sex by clicking the blank circle in front of the text “Male” or ”Female” as relevant for you. If selected, the blank circle would contain a black dot in front of the relevant text (You can select only one of them).</p>
-				 	<img class="img-responsive" src="sex.PNG" alt="sex">
+				 	<img class="img-responsive" src="https://lh6.googleusercontent.com/oaiykNYjUyi0EIN7pU6Z18dbsvX5T-D6y8W0DONBfB3Fh59r40mjRcvJpTJTXEPW6fdtEx2y=w1108-h619" alt="sex">
 
 			<li><b><u>1.1.f. Citizenship</u></b></li>
 				<p>Click the sign in the right corner of the ‘Citizenship’ label and Select the citizenship relevant for you. Place your mouse pointer on the relevant name so that it would be highlighted, then click or press. Then the list would disappear and your selected category would appear in the title box.</p>
@@ -99,7 +98,7 @@
 			<li><b><u>1.1.h. DateOf Birth</u></b></li>
 				<p>You should provide your birth date here in the following format.</p>
 				<p>		DD/MM/YYYY</p>
-				<img class="img-responsive" src="dob.PNG" alt="dob">
+				<img class="img-responsive" src="https://lh6.googleusercontent.com/GTWbstr_7EdRWCKTLL8q1nzPuYw62vMW9swxDX50hRNGLe4XSsSYZ5_Bt_elcJntKJJRaQ7j=w1108-h619" alt="dob">
 		</ol>
 		<li><b><u>1.2.Contact Details</u></b></li>
 		<p>Now you are in the second step of the Registration process. Enter your required contact details here.</p>
@@ -119,11 +118,11 @@
 				<li><b><u>1.2.d. Contact Number</u></b></li>
 					<p>Enter your mobile number here in the given format.</p>
 					<p>07********</p>
-					<img class="img-responsive" src="mobile.PNG" alt="mobile">
+					<img class="img-responsive" src="https://lh3.googleusercontent.com/Cr-OQ6Bcw80QBY6c8CxlS67r0vmaWV5j2Tc1t71Ms6zvHreIglFLZtni6Emh3e4raXBUAYrO=w1108-h619" alt="mobile">
 				<li><b><u>1.2.e. Contact Number</u></b></li>
 					<p>Enter your Land number here in the given format.</p>
 					<p>011*******</p>
-					<img class="img-responsive" src="land.PNG" alt="land">
+					<img class="img-responsive" src="https://lh5.googleusercontent.com/G8MZA3bBaKdlgALF0sGdzPevyDWv06DqBV-bvjUWTT5oJ4rd16rFburJWy2tCw90nxnnTaka=w1108-h619" alt="land">
 					<p>After filling all  the above Contact Details, click the Next button.</p>
 
 			</ol>
@@ -134,18 +133,18 @@
 				<li><b><u>1.3.a. Education</u></b></li>
 					<p>There are three options. You can select only one. </p>
 					<p>To select an option click the white button in front of the appropriate text.</p>
-					<img class="img-responsive" src="education.PNG" alt="other">
+					<img class="img-responsive" src="https://lh3.googleusercontent.com/NlNl3QLotq7bQbvJVM3qlibvKSfwGi7eid72Qs1Gv1aLSKaj3-LW8qRRVlUJV8dKeeH5uGFv=w1108-h619" alt="other">
 
 				<li><b><u>1.3.b. GCE A Level</u></b></li>
 					<p>You can type the year and select subject and Grade from the drop down list.</p>
-					<img class="img-responsive" src="a level.PNG" alt="a/l">
+					<img class="img-responsive" src="https://lh4.googleusercontent.com/F1xVReea68lkpXgDMy9Qr2fI4RwZuOFLHM8DRdCE3Q1gvW0RCnbOtvv8StjxAbOOugoHntoX=w1108-h619" alt="a/l">
 					<p>Click “Next” to continue.</p>
 			</ol>
 		<li><b><u>1.4.Other Details</u></b></li>
 				<li><b><u>1.4.a. Other Details</u></b></li>
 					<p>You can select only one district. Select the nearest district that you would prefer to appear for the registration.</p>
 					<p>Most registrations are carried out in Colombo. However we are also doing registration in Kandy, Galle and Jaffna. If your district is not in the list, you can request a district not in the list by typing  the name under ‘Other’ label.</p>
-					<img class="img-responsive" src="other.PNG" alt="other">
+					<img class="img-responsive" src="https://lh5.googleusercontent.com/4cZVZ1ycBs-yIVR3Y_cB1l5SbyFHBFYgBdq3E1XR9QbKxlzW_zHs5CjH_X5r10qPBWslsz0y=w1108-h619" alt="other">
 					<p>Click “Register” to continue. </p>
 					<p>Now you have done with the whole registration process. You will receive the username and password for your temporary account.</p>
 

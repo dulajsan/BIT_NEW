@@ -54,5 +54,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\Admin::class,//middleware for admin
         'SAR' => \App\Http\Middleware\SAR::class,//middleware for SAR
         'coordinator' => \App\Http\Middleware\Coordinator::class,//middleware for coordinator
+        'director' => \App\Http\Middleware\Director::class, //director
     ];
 }

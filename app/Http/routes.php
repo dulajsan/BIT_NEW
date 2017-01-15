@@ -120,6 +120,10 @@ Route::get('/sardash','SARDashboardController@index');
 /*coordinator*/
 Route::get('/coorddash','CoordDashboardController@index');
 
+/*director*/
+
+Route::get('/dirdash','DirDashboardController@index');
+
 /*
 |||||||||||||||||||||||||||||Internal system ||||||||||||||||||||||||||||||||||||||||||||
 */

@@ -86,6 +86,10 @@ class AuthController extends Controller
             return redirect('/coorddash');
         }
 
+        //director
+        elseif ($user->role=='5' && $user->live=='1') {
+            return redirect('/dirdash');
+        }
 
 
     }

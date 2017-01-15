@@ -102,6 +102,9 @@ Route::get('/getExamApp','PDFController@getExamApp')->middleware('student');
 
 Route::get('/manual','PDFController@loadusermanual');
 
+
+Route::get('userDetails','PDFController@getUserDetails');
+
 /*
 |-------------------------------------------------------------------------------
 |dashboard Routes
@@ -123,6 +126,10 @@ Route::get('/coorddash','CoordDashboardController@index');
 /*director*/
 
 Route::get('/dirdash','DirDashboardController@index');
+
+Route::get('/institution_rating', function () {
+    return view('inner/student/institution_rating');
+});
 
 /*
 |||||||||||||||||||||||||||||Internal system ||||||||||||||||||||||||||||||||||||||||||||
@@ -239,6 +246,17 @@ Route::get('/feeedit','FeesController@editFee');
 // admin
 
 Route::get('/account','AdminDashboardController@editAccount');
+
+Route::get('/manage_users','manageUser@index');
+
+Route::post('/newUser','manageUser@newUser');
+
+Route::get('/getUpdate','manageUser@getUpdate');
+
+Route::put('/newUser','manageUser@newUpdate');
+
+Route::post('/deleteUser','manageUser@deleteUser');
+
 
 // Route::get('/manage_users', function () {
 //     return view('inner/admin/manage_users');

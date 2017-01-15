@@ -59,4 +59,19 @@ class PDFController extends Controller
       $pdf=PDF::loadView('pdf.usermanual');
       return $pdf->stream('usermanual.pdf');
     }
+
+
+    public function getUserDetails(){
+
+
+     $users = User::where('role','0')->get();
+     $applicants= Applicant::all();
+    // $applicants=Applicant::where('user_user_id',$id)->get();
+      $pdf=PDF::loadView('pdf.userDetails',compact('users','applicants'));
+
+   //return $pdf->download('Voucher.pdf');
+
+   return $pdf->stream('userDeatils.pdf');
+
+    }
 }

@@ -683,7 +683,7 @@ table.fc-border-separate {
 
 
     <script type="text/javascript" src="{{asset('js/jquery.columns.min.js')}}"></script>
-<script>
+<!-- <script>
 
   $(document).ajaxComplete(function(){
     $.ajax({
@@ -758,10 +758,10 @@ $("document").ajaxComplete(function(){
       var email= $("#email").val();
 
 
+ -->
 
 
-
-      // var datastring="full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob;
+      <!-- // var datastring="full_name="+full_name+"&initials="+initials+"&last_name="+last_name+"&title="+title+"&sex="+sex+"&citizenship="+citizenship+"&isnic="+isnic+"&nic="+nic+"&dob="+dob;
 // $.ajax({
 //                 url:"editUserData",
 //                 type:"GET",
@@ -777,13 +777,13 @@ $("document").ajaxComplete(function(){
 //                 }
 
 
-//     });
+//     }); -->
 
-    });
+    <!-- });
 
   });
 
-  </script>
+  </script> -->
 
 
 <!--admin account details update-->
@@ -823,6 +823,209 @@ $("document").ajaxComplete(function(){
 
 
 </script>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function abc(){
+  $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+  });
+  });
+
+
+$(document).ajaxComplete(function(){
+
+    $('#addbtn').click(function(){
+        //alert("okaynnn");
+        $('#save').val('save');
+        $('#formUser').trigger('reset');
+        $('#addUser').modal('show');
+
+    });
+
+    $('#formUser').on('submit',function(e){
+        e.preventDefault();
+        var form=$('#formUser');
+        var formData=form.serialize();
+        var url=form.attr('action');
+        var state =$('#save').val();
+        var type ='post';
+        if(state=='update'){
+            type='put';
+        }
+         //jQuery.support.cors = true;
+
+        $.ajax({
+            type:type,
+            url:url,
+            data:formData,
+            success:function(data){
+                 var gender ="" ;
+                if (data.gender==0){
+                    gender="Male";
+                }else{
+                    gender="Female";
+                }
+
+                var title ="";
+                if(data.title=="Mr."){
+                    title = "Mr.";
+                }
+                else if(data.title=="Mrs."){
+                    title="Mrs.";
+                }
+                else if(data.title=="Miss."){
+                    title="Miss";
+                }
+                else if(data.title=="Rev."){
+                    title ="Rev.";
+                }else{
+                    title="Dr.";
+                }
+
+                var isnic ="";
+                if(data.is_nic=="nic"){
+                    isnic=data.nic;
+                }else
+                    isnic=data.passport;
+                var row='<tr id="user"' + data.id + '">'+
+                        '<td>'+data.id + '</td>'+
+                        '<td>'+data.full_name +'</td>'+
+                        '<td>'+data.initials +'</td>'+
+                        '<td>'+data.last_name +'</td>'+
+                        '<td>' + title + '</td>'+
+                        '<td>'+ gender +'</td>'+
+                        '<td>'+data.email + '</td>'+
+                        '<td>'+ isnic + '</td>'+
+                        '<td>'+data.role + '</td>'+
+                        '<td>' + '<button class="btn btn-success btn-edit" data-id="'+data.id+'" >Edit</button>' +
+                        '<button class="btn btn-danger btn-delete" data-id="'+data.id+'">Delete</button></td>' +
+                        '</tr>';
+
+
+                if(state=='save'){
+                    $('tbody').append(row);
+                }else{
+                    $('#addUser'+data.id).replaceWith(row);
+                }
+                $('#formUser').trigger('reset');
+                $('#fullname').focus();
+            }
+        });
+    })
+
+
+});
+
+
+
+function addRow(data){
+        var gender ="" ;
+        if (data.gender==0){
+            gender="Male";
+        }else{
+            gender="Female";
+        }
+
+        var title ="";
+        if(data.title=="Mr."){
+            title = "Mr.";
+        }
+        else if(data.title=="Mrs."){
+            title="Mrs.";
+        }
+        else if(data.title=="Miss."){
+            title="Miss";
+        }
+        else if(data.title=="Rev."){
+            title ="Rev.";
+        }else{
+            title="Dr.";
+        }
+
+        var isnic ="";
+        if(data.is_nic=="nic"){
+            isnic=data.nic;
+        }else
+            isnic=data.passport;
+        var row='<tr id="user"' + data.id + '">'+
+                '<td>'+data.id + '</td>'+
+                '<td>'+data.full_name +'</td>'+
+                '<td>'+data.initials +'</td>'+
+                '<td>'+data.last_name +'</td>'+
+                '<td>' + title + '</td>'+
+                '<td>'+ gender +'</td>'+
+                '<td>'+data.email + '</td>'+
+                '<td>'+ isnic + '</td>'+
+                '<td>'+data.role + '</td>'+
+                '<td>' + '<button class="btn btn-success btn-edit"  >Edit</button>' +
+                '<button class="btn btn-danger btn-delete">Delete</button></td>' +
+                '</tr>';
+
+               $('tbody').append(row);
+
+    }
+
+    //get update
+
+$(document).ajaxComplete(function(){
+
+    $('tbody').delegate('.btn-edit' , 'click', function(){
+        var value=$(this).data('id');
+        var url='{{URL::to('getUpdate')}}';
+        $.ajax({
+            type: 'get',
+            url:url,
+            data : {'id':value},
+            success:function(data){
+                $('#id').val(data.id);
+                $('#full_name').val(data.full_name);
+                $('#initials').val(data.initials);
+                $('#last_name').val(data.last_name);
+                $('#email').val(data.email);
+                $('#title').val(data.title);
+                $('#sex').val(data.sex);
+                $('#nic').val(data.nic);
+
+                $('#role').val(data.role);
+                 $('#save').val('update');
+
+                $('#addUser').modal('show');
+
+
+            }
+        });
+
+    });
+});
+
+//delete user
+$(document).ajaxComplete(function(){
+     $('tbody').delegate('.btn-delete' , 'click', function(){
+        var value=$(this).data('id');
+        var url='{{URL::to('deleteUser')}}';
+        if(confirm('Are you sure to delete?')==true){
+        $.ajax({
+            type: 'post',
+            url:url,
+            data : {'id':value},
+            success:function(data){
+                $('#addUser'+value).remove();
+
+    }
+
+   });
+    }
+
+});
+});
+
+</script>
+
 
 
 

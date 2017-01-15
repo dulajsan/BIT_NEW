@@ -336,6 +336,10 @@
                       <i class="fa fa-fw fa-wrench"></i> Settings
                     </li>
 
+                    <li class="left_tabs" id="rating">
+                      <i class="fa fa-fw fa-wrench"></i> Rating
+                    </li>
+
                     <li class="left_tabs">
                         <i class="fa fa-fw fa-dashboard"></i>VLE
                     </li>
@@ -606,6 +610,15 @@ $("#dashboard_coord").click(function(){
       //  $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/chat.css') }}') );
       $("#page-wrapper").load( "/messages #page-wrapper");
    });
+
+   //ratings
+   $("#rating").click(function(){
+      $("#contentmain").empty();
+       $("#page-wrapper").empty();
+       $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '{{ URL::asset('css/style.css') }}') );
+      $("#page-wrapper").load( "/institution_rating #page-wrapper");
+  });
+
 
    //statistics
     $("#statistics").click(function(){
